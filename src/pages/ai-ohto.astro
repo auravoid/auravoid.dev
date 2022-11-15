@@ -1,0 +1,22 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import AboutBot from "../components/ai-ohto/AboutBot.astro";
+import BotHead from "../components/ai-ohto/BotHead.astro";
+import BotHeader from "../components/ai-ohto/BotHeader.astro";
+import CommandList from "../components/ai-ohto/CommandList.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BotHead />
+    <BaseHead title="Ai Ohto" description="Docs for Ai Ohto." />
+  </head>
+  <body>
+    <div class="content-block">
+      <BotHeader />
+      <AboutBot />
+      <CommandList />
+    </div>
+  </body>
+</html>

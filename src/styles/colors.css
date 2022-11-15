@@ -1,0 +1,11 @@
+:root {
+  /* Background colors */
+  --brand-background: hsl(240, 4%, 5%);
+  --brand-background-light: hsl(240, 4%, 13%);
+  --brand-background-dark: hsl(240, 4%, 2%);
+  /* Text colors */
+  --brand-text: hsl(0, 0%, 78%);
+  --brand-text-light: hsl(0, 0%, 100%);
+  --brand-text-dark: hsl(0, 0%, 69%);
+  --brand-text-darker: hsl(0, 0%, 50%);
+}

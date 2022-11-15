@@ -1,0 +1,56 @@
+.body-box {
+  position: relative;
+  z-index: 100;
+  background-color: var(--brand-background);
+  padding: 3% 4%;
+  margin: 6% auto;
+  border: var(--brand-text) 3px solid;
+  width: 80vw;
+  max-width: 48rem;
+}
+
+a,
+a:visited {
+  color: var(--brand-text);
+}
+
+a:hover,
+a:active {
+  color: var(--brand-text-dark);
+}
+
+#stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+}
+
+.whatthis {
+  position: relative;
+  display: inline-block;
+}
+
+.thisis {
+  visibility: hidden;
+  width: 128px;
+  background-color: var(--brand-background-dark);
+  color: var(--brand-text);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.whatthis:hover .thisis {
+  visibility: visible;
+  opacity: 1;
+}
