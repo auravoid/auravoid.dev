@@ -43,7 +43,7 @@ a:active {
   padding: 5px 0;
   position: absolute;
   z-index: 1;
-  bottom: 125%;
+  bottom: -125%;
   left: 50%;
   margin-left: -60px;
   opacity: 0;
@@ -53,4 +53,76 @@ a:active {
 .whatthis:hover .thisis {
   visibility: visible;
   opacity: 1;
+}
+
+#home-page {
+  max-width: 800px;
+  margin: 1% auto 0;
+}
+#text {
+  margin-top: 1%;
+}
+
+#text h1:hover {
+  animation: glitch 0.2s ease-out;
+}
+
+@keyframes glitch {
+  0% {
+    transform: translateX(0);
+    text-shadow: 0 0 0 #ffff00, 0 0 0 #ff00ff, 0 0 0 #00ffff, 0 0 0 #ffffff;
+  }
+  20% {
+    transform: translateX(-0.1em);
+    text-shadow: -3px 0 0 #ffff00, -6px 0 0 #ff00ff, 3px 0 0 #00ffff,
+      6px 0 0 #ffffff;
+  }
+  40% {
+    transform: translateX(0.1em);
+    text-shadow: 3px 0 0 #ffff00, 6px 0 0 #ff00ff, -3px 0 0 #00ffff,
+      -6px 0 0 #ffffff;
+  }
+  60% {
+    transform: translateX(-0.1em);
+    text-shadow: -6px 0 0 #ffff00, -3px 0 0 #ff00ff, -3px 0 0 #00ffff,
+      3px 0 0 #ffffff;
+  }
+  80% {
+    transform: translateX(0.1em);
+    text-shadow: -6px 0 0 #ffff00, -3px 0 0 #ff00ff, 6px 0 0 #00ffff,
+      3px 0 0 #ffffff;
+  }
+}
+
+hr {
+  width: 90%;
+  opacity: 70%;
+}
+
+.sponsor-me a {
+  color: unset;
+}
+
+.profile-icons > a > i {
+  font-size: 2em;
+  color: var(--brand-text);
+}
+
+.profile-icons > a {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2% 1%;
+}
+
+.profile-icons a,
+.profile-icons a:after,
+.profile-icons a:hover,
+.profile-icons a:active {
+  color: unset;
 }

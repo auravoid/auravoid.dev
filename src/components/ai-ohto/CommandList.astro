@@ -39,8 +39,12 @@ if (commands["Menu"]) {
 
           {Object.entries(commands[key]).map(([id]) => (
             <tr>
-              <td class="command-name"><span class="mention">/{ commands[key][id].name }</span></td>
-              <td class="command-description">{commands[key][id].description}</td>
+              <td class="command-name">
+                <span class="mention">/{commands[key][id].name}</span>
+              </td>
+              <td class="command-description">
+                {commands[key][id].description}
+              </td>
             </tr>
           ))}
         </table>

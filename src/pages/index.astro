@@ -1,0 +1,91 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Navigation from "../components/Navigation.astro";
+---
+
+<style>
+  h1 {
+    font-size: 2.5rem;
+    font-family: "Fira Mono", monospace;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  body {
+    background: var(--brand-background-dark);
+    text-align: center;
+    color: var(--brand-text);
+    font-family: "Fira Mono", monospace;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .about-me {
+    padding: 0 5%;
+    text-align: left;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-me > ul {
+    padding: 1% 2%;
+  }
+</style>
+
+<html lang="en">
+  <head>
+    <BaseHead
+      title="auravoid"
+      description="A simple website. Nothing too special about it."
+      color="#feb9db"
+      page="main"
+    />
+  </head>
+  <body>
+    <div id="home-page">
+      <Navigation />
+      <div id="text" class="body-box">
+        <h1>auravoid</h1>
+        <h2>Hello!! I'm Aura, a nerdy web developer.</h2>
+        <hr />
+        <div class="about-me">
+          <ul>
+            <li>Hobbies: Anime, gaming, music</li>
+            <li>Pronouns: They/Them</li>
+          </ul>
+        </div>
+        <!-- Section for coding stats -->
+        <!-- Section for Github Sponsors -->
+        <hr />
+        <div class="profile-icons">
+          <a
+            aria-label="GitHub Icon"
+            href="https://github.com/auravoid"
+            target="_blank"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a
+            aria-label="Discord Icon"
+            href="https://discord.gg/uDzYJBHT6P"
+            target="_blank"
+          >
+            <i class="fa-brands fa-discord"></i>
+          </a>
+          <a
+            aria-label="Twitter Icon"
+            href="https://twitter.com/auravoidle"
+            target="_blank"
+          >
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

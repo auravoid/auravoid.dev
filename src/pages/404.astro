@@ -1,0 +1,38 @@
+---
+import "../styles/global.css";
+---
+
+<style>
+  h1 {
+    font-size: 2.5rem;
+    font-family: "Fira Mono", monospace;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  body {
+    text-align: center;
+  }
+
+  .error {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: hsla(0, 0%, 0%, 0.75);
+    padding: 3rem 6rem;
+    border-radius: 1rem;
+  }
+</style>
+
+<div>
+  <div id="stars" style="background:-moz-element(#backgroundElt);"></div>
+  <div class="error">
+    <h1>404</h1>
+    <h2>Page not found</h2>
+    <p>I recommend you go back <a href="/">home</a>.</p>
+  </div>
+</div>
