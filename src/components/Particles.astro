@@ -5,6 +5,7 @@
 <script src="/particles.js" is:inline></script>
 <div id="stars"></div>
 <script>
+  declare var particlesJS: any;
   window.addEventListener("load", function () {
     particlesJS.load("stars", `/particles.json`, function () {
       console.log("Particles: https://github.com/VincentGarreau/particles.js/");
