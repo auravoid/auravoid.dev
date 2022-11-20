@@ -5,5 +5,5 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: "https://auravoid.dev",
-  integrations: [mdx(), sitemap()]
+  integrations: [mdx(), sitemap()],
 });
