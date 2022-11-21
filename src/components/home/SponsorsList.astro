@@ -20,18 +20,20 @@ if (sponsors.length === 0) {
 <style>
   .sponsor-grid {
     display: grid;
-    grid-template-columns: repeat(5, 0.5fr);
-    grid-template-rows: masonry;
-    width: 50vw;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
     margin: auto;
   }
   .sponsor-grid > p {
     padding: 0.5rem;
     margin: auto;
   }
+  .sponsor-grid > a {
+	display: block;
+	padding: 0.5rem;
+	margin: auto;
+  }
   .sponsor-grid img {
     border-radius: 50%;
-    width: 72px;
   }
   .sponsor-me a {
     color: unset;
@@ -52,6 +54,8 @@ if (sponsors.length === 0) {
 			<img
             alt={sponsors[person].handle}
             src={sponsors[person].avatar}
+			width="48px"
+			height="48px"
           >
           </a>
         );
