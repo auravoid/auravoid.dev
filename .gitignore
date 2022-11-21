@@ -23,5 +23,4 @@ pnpm-debug.log*
 .vscode/
 
 # config files
-*/config.ts
-*/env.*.ts
+src/config.ts
