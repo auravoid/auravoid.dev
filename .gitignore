@@ -21,3 +21,7 @@ pnpm-debug.log*
 # editor files
 .idea/
 .vscode/
+
+# config files
+config.ts
+env.*.ts
