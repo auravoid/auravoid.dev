@@ -1,0 +1,61 @@
+---
+const res = await fetch(
+  "https://cors.auravoid.dev/https://sponsors.trnck.dev/sponsors/auravoid",
+  {
+    headers: {
+      "x-requested-with": "https://auravoid.dev",
+    },
+  }
+);
+const { sponsors } = await res.json();
+if (sponsors.length === 0) {
+  sponsors.push({
+    id: 0,
+    handle: "No Sponsors Yet!",
+    profile: "https://github.com/sponsors/auravoid",
+  });
+}
+---
+
+<style>
+  .sponsor-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 0.5fr);
+    grid-template-rows: masonry;
+    width: 50vw;
+    margin: auto;
+  }
+  .sponsor-grid > p {
+    padding: 0.5rem;
+    margin: auto;
+  }
+  .sponsor-grid img {
+    border-radius: 50%;
+    width: 72px;
+  }
+  .sponsor-me a {
+    color: unset;
+  }
+</style>
+
+<div class="sponsor-me">
+  <h3>Sponsor Me</h3>
+  <a href="https://github.com/sponsors/auravoid">
+    <p>Support me on GitHub Sponsors!</p>
+  </a>
+  <h4>My Amazing Sponsors:</h4>
+  <div class="sponsor-grid">
+    {
+      Object.entries(sponsors).map(([person]) => {
+        return (
+          <a href={sponsors[person].profile} rel="noopener noreferrer" target="_blank">
+			<img
+            alt={sponsors[person].handle}
+            src={sponsors[person].avatar}
+          >
+          </a>
+        );
+      })
+    }
+  </div>
+</div>
