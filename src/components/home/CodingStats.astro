@@ -1,0 +1,59 @@
+---
+const res = await fetch(
+  "https://cors.auravoid.dev/https://wakapi.dev/api/compat/wakatime/v1/users/auravoid/stats/last_30_days",
+  {
+    headers: {
+      Authorization: "Basic YjExN2VmNDgtNTM3Yy00Njg5LThhNDEtZTNkZTk2YmQ2MzBm",
+      "x-requested-with": "https://auravoid.dev",
+    },
+  }
+);
+const { data } = await res.json();
+---
+
+<style>
+  #langs {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+  }
+  .language-name,
+  .language-time {
+    padding: 0.5rem;
+    border: #5e5e5e 2px solid;
+    width: 10em;
+  }
+  .language-name {
+    text-align: right;
+  }
+  .language-time {
+    text-align: left;
+  }
+  .stats-box {
+    padding: 0 5%;
+    text-align: center;
+  }
+</style>
+
+<div class="stats-box">
+  <h3>Top 5 Languages in the Past 30 Days</h3>
+  <br />
+  <table id="langs">
+    <tr>
+      <td class="language-name">
+        <h4>Language</h4>
+      </td>
+      <td class="language-time">
+        <h4>Time Used</h4>
+      </td>
+    </tr>
+    {
+      Object.entries(data.languages.slice(0, 5)).map(([item]) => (
+        <tr>
+          <td class="language-name">{data.languages[item].name}</td>
+          <td class="language-time">{data.languages[item].text}</td>
+        </tr>
+      ))
+    }
+  </table>
+</div>
