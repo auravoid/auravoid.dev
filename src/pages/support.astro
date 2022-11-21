@@ -2,6 +2,7 @@
 import BaseHead from "../components/BaseHead.astro";
 import Navigation from "../components/Navigation.astro";
 import Particles from "../components/Particles.astro";
+import CookiesPopup from "../components/support/CookiesPopup.astro";
 const allPages = await Astro.glob("../pages/legal/*.md");
 ---
 
@@ -39,6 +40,7 @@ const allPages = await Astro.glob("../pages/legal/*.md");
           }
         </ul>
       </div>
+      <CookiesPopup />
     </div>
   </body>
 </html>
