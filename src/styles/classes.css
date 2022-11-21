@@ -97,6 +97,8 @@ a:active {
 hr {
   width: 90%;
   opacity: 70%;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .sponsor-me a {
