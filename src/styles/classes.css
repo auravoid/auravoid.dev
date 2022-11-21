@@ -63,7 +63,7 @@ a:active {
   margin-top: 1%;
 }
 
-#text h1:hover {
+#name:hover {
   animation: glitch 0.2s ease-out;
 }
 

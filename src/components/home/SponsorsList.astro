@@ -20,7 +20,7 @@ if (sponsors.length === 0) {
 <style>
   .sponsor-grid {
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     margin: auto;
   }
   .sponsor-grid > p {
@@ -28,9 +28,9 @@ if (sponsors.length === 0) {
     margin: auto;
   }
   .sponsor-grid > a {
-	display: block;
-	padding: 0.5rem;
-	margin: auto;
+    display: block;
+    padding: 0.5rem;
+    margin: auto;
   }
   .sponsor-grid img {
     border-radius: 50%;
@@ -50,13 +50,17 @@ if (sponsors.length === 0) {
     {
       Object.entries(sponsors).map(([person]) => {
         return (
-          <a href={sponsors[person].profile} rel="noopener noreferrer" target="_blank">
-			<img
-            alt={sponsors[person].handle}
-            src={sponsors[person].avatar}
-			width="48px"
-			height="48px"
+          <a
+            href={sponsors[person].profile}
+            rel="noopener noreferrer"
+            target="_blank"
           >
+            <img
+              alt={sponsors[person].handle}
+              src={sponsors[person].avatar}
+              width="48px"
+              height="48px"
+            />
           </a>
         );
       })

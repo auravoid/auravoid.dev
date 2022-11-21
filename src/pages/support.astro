@@ -1,0 +1,44 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Navigation from "../components/Navigation.astro";
+import Particles from "../components/Particles.astro";
+const allPages = await Astro.glob("../pages/legal/*.md");
+---
+
+<style>
+  #text > h1,
+  #text > p {
+    text-align: center;
+  }
+</style>
+
+<html lang="en">
+  <head>
+    <BaseHead
+      title="Support"
+      description="General support page for projects by auravoid"
+      color="#feb9db"
+      page="main"
+    />
+  </head>
+  <body>
+    <Particles />
+    <div id="home-page">
+      <Navigation />
+      <div id="text" class="body-box">
+        <h1>Support</h1>
+        <p>Here you can find support links for projects I have created.</p>
+        <hr />
+        <ul>
+          {
+            allPages.map((page) => (
+              <li>
+                <a href={page.url}>{page.frontmatter.title}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
