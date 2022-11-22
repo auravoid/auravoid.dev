@@ -3,7 +3,7 @@ const { frontmatter } = Astro.props;
 import BaseHead from "../components/BaseHead.astro";
 import Navigation from "../components/Navigation.astro";
 import Particles from "../components/Particles.astro";
-import CookiesPopup from "../components/support/CookiesPopup.astro";
+import "../styles/markdown.css";
 ---
 
 <html lang="en">
@@ -23,6 +23,5 @@ import CookiesPopup from "../components/support/CookiesPopup.astro";
         <slot />
       </div>
     </div>
-	<CookiesPopup />
   </body>
 </html>

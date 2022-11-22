@@ -2,8 +2,8 @@
 import BaseHead from "../components/BaseHead.astro";
 import Navigation from "../components/Navigation.astro";
 import Particles from "../components/Particles.astro";
-import CookiesPopup from "../components/support/CookiesPopup.astro";
-const allPages = await Astro.glob("../pages/legal/*.md");
+const legalPages = await Astro.glob("../pages/legal/*.md");
+const aboutPages = await Astro.glob("../pages/about/*.md");
 ---
 
 <style>
@@ -11,13 +11,26 @@ const allPages = await Astro.glob("../pages/legal/*.md");
   #text > p {
     text-align: center;
   }
+  .linklist {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin: auto;
+  }
+  .linklist > p {
+    padding: 0.5rem;
+    margin: auto;
+	font-size: 14px;
+  }
+  .body-box > p {
+	font-size: 16px;
+  }
 </style>
 
 <html lang="en">
   <head>
     <BaseHead
       title="Support"
-      description="General support page for projects by auravoid"
+      description="General support and about page."
       color="#feb9db"
       page="main"
     />
@@ -29,18 +42,28 @@ const allPages = await Astro.glob("../pages/legal/*.md");
       <div id="text" class="body-box">
         <h1>Support</h1>
         <p>Here you can find support links for projects I have created.</p>
-        <hr />
-        <ul>
+        <div id="support-links" class="linklist">
           {
-            allPages.map((page) => (
-              <li>
+            legalPages.map((page) => (
+              <p>
                 <a href={page.url}>{page.frontmatter.title}</a>
-              </li>
+              </p>
             ))
           }
-        </ul>
+        </div>
+		<hr />
+		<h1>About</h1>
+		<p>Here you can find some things that you'd like to know more about.</p>
+		<div id="about-links" class="linklist">
+			{
+			  aboutPages.map((page) => (
+				<p>
+				  <a href={page.url}>{page.frontmatter.title}</a>
+				</p>
+			  ))
+			}
+		  </div>
       </div>
-      <CookiesPopup />
     </div>
   </body>
 </html>
