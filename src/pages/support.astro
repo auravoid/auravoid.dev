@@ -2,7 +2,8 @@
 import BaseHead from "../components/BaseHead.astro";
 import Navigation from "../components/Navigation.astro";
 import Particles from "../components/Particles.astro";
-const allPages = await Astro.glob("../pages/legal/*.md");
+const legalPages = await Astro.glob("../pages/legal/*.md");
+const aboutPages = await Astro.glob("../pages/about/*.md");
 ---
 
 <style>
@@ -10,12 +11,12 @@ const allPages = await Astro.glob("../pages/legal/*.md");
   #text > p {
     text-align: center;
   }
-  #support-links {
+  .linklist {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     margin: auto;
   }
-  #support-links > p {
+  .linklist > p {
     padding: 0.5rem;
     margin: auto;
   }
@@ -38,15 +39,24 @@ const allPages = await Astro.glob("../pages/legal/*.md");
         <h1>Support</h1>
         <p>Here you can find support links for projects I have created.</p>
         <hr />
-        <div id="support-links">
+        <div id="support-links" class="linklist">
           {
-            allPages.map((page) => (
+            legalPages.map((page) => (
               <p>
                 <a href={page.url}>{page.frontmatter.title}</a>
               </p>
             ))
           }
         </div>
+		<div id="about-links" class="linklist">
+			{
+			  aboutPages.map((page) => (
+				<p>
+				  <a href={page.url}>{page.frontmatter.title}</a>
+				</p>
+			  ))
+			}
+		  </div>
       </div>
     </div>
   </body>

@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: "About PC"
+title: "About Devices"
 pubDate: 2022-11-01
 description: "If you want to know stuff about my devices, here's where you can find it."
 author: "auravoid"
