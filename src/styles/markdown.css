@@ -1,0 +1,16 @@
+table {
+  border-collapse: collapse;
+  min-width: 60%;
+}
+tr > td {
+  padding: 0.5rem 0.7rem;
+  border: #5e5e5e 2px solid;
+  font-size: 14px;
+}
+tr > th {
+  padding-bottom: 0.4rem;
+}
+
+h2 {
+  font-size: 30px;
+}
