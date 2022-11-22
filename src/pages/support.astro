@@ -38,15 +38,15 @@ const allPages = await Astro.glob("../pages/legal/*.md");
         <h1>Support</h1>
         <p>Here you can find support links for projects I have created.</p>
         <hr />
-		<div id="support-links">
-			{
-				allPages.map((page) => (
-				  <p>
-					<a href={page.url}>{page.frontmatter.title}</a>
-				  </p>
-				))
-			  }
-		</div>
+        <div id="support-links">
+          {
+            allPages.map((page) => (
+              <p>
+                <a href={page.url}>{page.frontmatter.title}</a>
+              </p>
+            ))
+          }
+        </div>
       </div>
     </div>
   </body>
