@@ -10,6 +10,15 @@ const allPages = await Astro.glob("../pages/legal/*.md");
   #text > p {
     text-align: center;
   }
+  #support-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin: auto;
+  }
+  #support-links > p {
+    padding: 0.5rem;
+    margin: auto;
+  }
 </style>
 
 <html lang="en">
@@ -29,15 +38,15 @@ const allPages = await Astro.glob("../pages/legal/*.md");
         <h1>Support</h1>
         <p>Here you can find support links for projects I have created.</p>
         <hr />
-        <ul>
-          {
-            allPages.map((page) => (
-              <li>
-                <a href={page.url}>{page.frontmatter.title}</a>
-              </li>
-            ))
-          }
-        </ul>
+		<div id="support-links">
+			{
+				allPages.map((page) => (
+				  <p>
+					<a href={page.url}>{page.frontmatter.title}</a>
+				  </p>
+				))
+			  }
+		</div>
       </div>
     </div>
   </body>
