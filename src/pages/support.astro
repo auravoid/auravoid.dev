@@ -19,6 +19,10 @@ const aboutPages = await Astro.glob("../pages/about/*.md");
   .linklist > p {
     padding: 0.5rem;
     margin: auto;
+	font-size: 14px;
+  }
+  .body-box > p {
+	font-size: 16px;
   }
 </style>
 
@@ -26,7 +30,7 @@ const aboutPages = await Astro.glob("../pages/about/*.md");
   <head>
     <BaseHead
       title="Support"
-      description="General support page for projects by auravoid"
+      description="General support and about page."
       color="#feb9db"
       page="main"
     />
@@ -38,7 +42,6 @@ const aboutPages = await Astro.glob("../pages/about/*.md");
       <div id="text" class="body-box">
         <h1>Support</h1>
         <p>Here you can find support links for projects I have created.</p>
-        <hr />
         <div id="support-links" class="linklist">
           {
             legalPages.map((page) => (
@@ -48,6 +51,9 @@ const aboutPages = await Astro.glob("../pages/about/*.md");
             ))
           }
         </div>
+		<hr />
+		<h1>About</h1>
+		<p>Here you can find some things that you'd like to know more about.</p>
 		<div id="about-links" class="linklist">
 			{
 			  aboutPages.map((page) => (
