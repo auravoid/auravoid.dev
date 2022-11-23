@@ -9,3 +9,5 @@ Fun history about the website. It used to be regular HTML, JS & CSS with no fram
 > ## Note
 >
 > This website isn't meant to be perfect and has all been a self-taught project. I'm 100% sure there are mistakes and things that can be improved upon. If you'd like to help, create a pull request or an issue and suggest your changes.
+
+![Pagespeed Insights](https://pagespeed-insights.herokuapp.com/?url=https://auravoid.dev&categories=seo,performance,accessibility)
