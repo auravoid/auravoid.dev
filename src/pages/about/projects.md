@@ -8,3 +8,11 @@ tags: ["projects"]
 ---
 
 # Projects
+
+## Ai Ohto
+
+A Discord bot written in JavaScript.
+
+## Fun Responses
+
+An API that provides jokes, roasts, topics, etc.
