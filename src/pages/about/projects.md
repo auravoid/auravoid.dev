@@ -9,10 +9,13 @@ tags: ["projects"]
 
 # Projects
 
-## Ai Ohto
+## [Ai Ohto](/ai-ohto)
 
 A Discord bot written in JavaScript.
 
 ## Fun Responses
 
-An API that provides jokes, roasts, topics, etc.
+An API that provides jokes, roasts, topics, etc..
+
+> #### Note:
+> Currently being reworked and rewritten.
