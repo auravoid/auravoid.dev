@@ -3,7 +3,7 @@ const res = await fetch(
   "https://cors.auravoid.dev/https://wakapi.dev/api/compat/wakatime/v1/users/auravoid/stats/last_30_days",
   {
     headers: {
-      Authorization: "Basic YjExN2VmNDgtNTM3Yy00Njg5LThhNDEtZTNkZTk2YmQ2MzBm",
+      Authorization: "Basic " + import.meta.env.SECRET_WAKAPI_KEY,
       "x-requested-with": "https://auravoid.dev",
     },
   }
