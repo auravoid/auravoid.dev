@@ -1,0 +1,35 @@
+@import url('./colors.css');
+
+body {
+    background: var(--brand-background-dark);
+    text-align: center;
+    color: var(--brand-text);
+    font-family: "Fira Mono", monospace;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+div.content__main {
+    position: relative;
+    z-index: 100;
+    background-color: var(--brand-background);
+    padding: 3% 4%;
+    margin: 6% auto;
+    border: var(--brand-text) 3px solid;
+    width: 80vw;
+    max-width: 48rem;
+    border-radius: 8px;
+}
+
+div.content__main h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+div.content__main h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}

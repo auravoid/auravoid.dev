@@ -1,13 +1,22 @@
 ---
-// cry
 ---
 
+<style>
+  #background__animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+  }
+</style>
 <script src="/particles.js" is:inline></script>
-<div id="stars"></div>
+<div id="background__animation"></div>
 <script>
   declare var particlesJS: any;
   window.addEventListener("load", function () {
-    particlesJS.load("stars", `/particles.json`, function () {
+    particlesJS.load("background__animation", `/particles.json`, function () {
       console.log("Particles: https://github.com/VincentGarreau/particles.js/");
       console.log("Using a modified version by @Saturate");
     });

@@ -1,0 +1,61 @@
+---
+---
+
+<style>
+  #navbar {
+    position: relative;
+    z-index: 100;
+    background-color: var(--brand-background);
+    border-bottom: var(--brand-text) 3px solid;
+    padding: 0.5em;
+  }
+  a > i {
+    font-size: 1.4rem;
+    color: var(--brand-text);
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+  }
+
+  .nav__link {
+    position: relative;
+    display: inline-block;
+  }
+
+  .nav__about {
+    visibility: hidden;
+    width: 128px;
+    background-color: var(--brand-background-light);
+    color: var(--brand-text);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 10;
+    bottom: -175%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    border: 1px solid var(--brand-text);
+  }
+
+  .nav__link:hover .nav__about {
+    visibility: visible;
+    opacity: 1;
+  }
+</style>
+
+<div id="navbar">
+  <a class="nav__link" href="/">
+    <span class="nav__about">Home</span>
+    <i class="fas fa-home"></i>
+  </a>
+  <a class="nav__link" href="https://blog.auravoid.dev">
+    <span class="nav__about">Blog</span>
+    <i class="fas fa-comment"></i>
+  </a>
+  <a class="nav__link" href="/support">
+    <span class="nav__about">Support</span>
+    <i class="fas fa-question-circle"></i>
+  </a>
+</div>
