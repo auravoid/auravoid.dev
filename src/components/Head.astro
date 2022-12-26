@@ -25,6 +25,7 @@ const {
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="generator" content={Astro.generator} />
   <meta content={color} name="theme-color" />
+  <meta name="color-scheme" content="dark light" />
 
   <!-- Primary Meta Tags -->
   <title>{title}</title>
@@ -61,3 +62,7 @@ const {
 </head>
 <CookiesPopup />
 <Particles />
+<script>
+  import { setTheme } from "../scripts/main.js";
+  setTheme();
+</script>

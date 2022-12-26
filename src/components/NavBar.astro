@@ -9,7 +9,7 @@
     border-bottom: var(--brand-text) 3px solid;
     padding: 0.5em;
   }
-  a > i {
+  i.nav__img {
     font-size: 1.4rem;
     color: var(--brand-text);
     padding-right: 2.5rem;
@@ -43,19 +43,38 @@
     visibility: visible;
     opacity: 1;
   }
+
+  .theme__toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0.5em 0;
+  }
+
+  .theme__toggle:hover {
+    cursor: pointer;
+  }
 </style>
+<script>
+  import {changeTheme} from "../scripts/main.js";
+
+  document.getElementById("toggle").addEventListener("click", changeTheme);
+</script>
 
 <div id="navbar">
   <a class="nav__link" href="/">
     <span class="nav__about">Home</span>
-    <i class="fas fa-home"></i>
+    <i class="fas fa-home nav__img"></i>
   </a>
-  <a class="nav__link" href="https://blog.auravoid.dev">
+  <a class="nav__link" href="https://auravoid.moe">
     <span class="nav__about">Blog</span>
-    <i class="fas fa-comment"></i>
+    <i class="fas fa-comment nav__img"></i>
   </a>
   <a class="nav__link" href="/support">
     <span class="nav__about">Support</span>
-    <i class="fas fa-question-circle"></i>
+    <i class="fas fa-question-circle nav__img"></i>
   </a>
+  <div class="theme__toggle" id="toggle">
+    <i class="fas fa-moon nav__img"></i>
+  </div>
 </div>

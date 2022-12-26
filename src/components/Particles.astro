@@ -14,11 +14,9 @@
 <script src="/particles.js" is:inline></script>
 <div id="background__animation"></div>
 <script>
-  declare var particlesJS: any;
-  window.addEventListener("load", function () {
-    particlesJS.load("background__animation", `/particles.json`, function () {
-      console.log("Particles: https://github.com/VincentGarreau/particles.js/");
-      console.log("Using a modified version by @Saturate");
-    });
-  });
+  import { setParticles } from "../scripts/main.js";
+  console.info(
+    "Particles: https://github.com/VincentGarreau/particles.js/\nUsing a modified version by @Saturate"
+  );
+  window.addEventListener("load", setParticles);
 </script>
