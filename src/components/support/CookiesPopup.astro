@@ -26,19 +26,22 @@
     margin: 0.7rem auto;
   }
   #acceptCookies {
-    background-color: var(--brand-background);
+    background-color: var(--brand-background-light);
     color: var(--brand-text);
-    border: 1px solid var(--brand-text-darker);
     border-radius: 8px;
-    padding: 5px;
+    padding: 0.6rem;
     font-family: inherit;
     cursor: pointer;
+  }
+  .privacy {
+    text-decoration: underline;
   }
 </style>
 <div id="cookiePopup">
   <p>
-    By using this website, you agree to the <a href="/legal/privacy"
-      >Privacy Policy</a
+    By using this website, you agree to the <a
+      href="/legal/privacy"
+      class="privacy">Privacy Policy</a
     >.
   </p>
   <button id="acceptCookies">Accept</button>

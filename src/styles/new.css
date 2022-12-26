@@ -14,7 +14,7 @@ body {
 
 div.content__main {
     position: relative;
-    z-index: 100;
+    z-index: 2;
     background-color: var(--brand-background);
     padding: 3% 4%;
     margin: 6% auto;
