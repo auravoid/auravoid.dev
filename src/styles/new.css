@@ -38,3 +38,15 @@ hr.content__divider {
     border: var(--brand-text) 1px solid;
     margin: 1rem 0;
 }
+
+a,
+a:visited {
+  color: var(--brand-text);
+  text-decoration: underline;
+}
+
+a:hover,
+a:active {
+  color: var(--brand-text-dark);
+  text-decoration: underline;
+}

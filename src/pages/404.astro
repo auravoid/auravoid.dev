@@ -1,39 +1,21 @@
 ---
-import "../styles/global.css";
-import Particles from "../components/Particles.astro";
+import Head from "../components/Head.astro";
+import NavBar from "../components/NavBar.astro";
 ---
 
-<style>
-  h1 {
-    font-size: 2.5rem;
-    font-family: "Fira Mono", monospace;
-  }
-
-  h2 {
-    font-size: 1.25rem;
-  }
-
-  body {
-    text-align: center;
-  }
-
-  .error {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: hsla(0, 0%, 0%, 0.75);
-    padding: 3rem 6rem;
-    border-radius: 1rem;
-  }
-</style>
-
-<div>
-  <Particles />
-  <div class="error">
-    <h1>404</h1>
-    <h2>Page not found</h2>
-    <p>I recommend you go back <a href="/">home</a>.</p>
-  </div>
-</div>
+<html>
+  <Head
+    title="404 - auravoid"
+    description="A bit of nothing here."
+    color="#feb9db"
+  />
+  <body>
+    <NavBar />
+    <div class="content__main">
+      <h1>404</h1>
+      <p>Content not found</p>
+      <hr class="content__divider" />
+      <p>I think you should consider <a href="/">going home</a>.</p>
+    </div>
+  </body>
+</html>
