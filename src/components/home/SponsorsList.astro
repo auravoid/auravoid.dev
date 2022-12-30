@@ -37,15 +37,19 @@ if (sponsors.length === 0) {
   }
   .sponsor-me a {
     color: unset;
+    text-decoration: underline;
+  }
+
+  .sponsor-me h3 {
+    margin: 0;
+    font-size: 24px;
   }
 </style>
 
 <div class="sponsor-me">
-  <h3>Sponsor Me</h3>
   <a href="https://github.com/sponsors/auravoid">
-    <p>Support me on GitHub Sponsors!</p>
+    <h3>My Sponsors</h3>
   </a>
-  <h4>My Amazing Sponsors:</h4>
   <div class="sponsor-grid">
     {
       Object.entries(sponsors).map(([person]) => {

@@ -28,11 +28,5 @@ export function setParticles() {
     particlesJS.load(
         "background__animation",
         `/particles.json`,
-        function () {
-            console.log(
-                "Particles: https://github.com/VincentGarreau/particles.js/"
-            );
-            console.log("Using a modified version by @Saturate");
-        }
     );
 }

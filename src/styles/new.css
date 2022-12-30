@@ -33,3 +33,8 @@ div.content__main h2 {
     font-size: 1.5rem;
     margin: 0;
 }
+
+hr.content__divider {
+    border: var(--brand-text) 1px solid;
+    margin: 1rem 0;
+}
