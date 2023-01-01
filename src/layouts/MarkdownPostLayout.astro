@@ -1,24 +1,23 @@
 ---
 const { frontmatter } = Astro.props;
-import BaseHead from "../components/BaseHead.astro";
-import Navigation from "../components/Navigation.astro";
+import Head from "../components/Head.astro";
+import NavBar from "../components/NavBar.astro";
 import Particles from "../components/Particles.astro";
 import "../styles/markdown.css";
 ---
 
 <html lang="en">
   <head>
-    <BaseHead
+    <Head
       title={frontmatter.title}
       description={frontmatter.description}
       color="#feb9db"
-      page="../main"
     />
   </head>
   <body>
     <Particles />
     <div id="home-page">
-      <Navigation />
+      <NavBar />
       <div id="text" class="body-box">
         <slot />
       </div>
