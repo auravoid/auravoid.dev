@@ -5,11 +5,13 @@
 [data-theme="light"] {
     /* Background colors */
     --brand-background: hsl(0, 0%, 69%);
+    --brand-background-hex: #b0b0b0;
     --brand-background-light: hsl(0, 0%, 78%);
     --brand-background-dark: hsl(0, 0%, 50%);
     --brand-background-slight: hsl(0, 0%, 74%);
     /* Text colors */
     --brand-text: hsl(0, 0%, 20%);
+    --brand-text-hex: #333333;
     --brand-text-light: hsl(0, 0%, 10%);
     --brand-text-dark: hsl(0, 0%, 30%);
     --brand-text-darker: hsl(0, 0%, 50%);
@@ -18,11 +20,13 @@
 [data-theme="dark"] {
     /* Background colors */
     --brand-background: hsl(240, 4%, 5%);
+    --brand-background-hex: #0c0c0d;
     --brand-background-light: hsl(240, 4%, 13%);
     --brand-background-dark: hsl(240, 4%, 2%);
     --brand-background-slight: hsl(240, 4%, 7%);
     /* Text colors */
     --brand-text: hsl(0, 0%, 78%);
+    --brand-text-hex: #c7c7c7;
     --brand-text-light: hsl(0, 0%, 100%);
     --brand-text-dark: hsl(0, 0%, 69%);
     --brand-text-darker: hsl(0, 0%, 50%);

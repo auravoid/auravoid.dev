@@ -14,10 +14,10 @@ body {
 
 div.content__main {
     position: relative;
-    z-index: 2;
+    /* z-index: 2; */
     background-color: var(--brand-background);
     padding: 3% 4%;
-    margin: 6% auto;
+    margin: 3% auto 0 auto;
     border: var(--brand-text) 3px solid;
     width: 80vw;
     max-width: 48rem;
@@ -41,12 +41,24 @@ hr.content__divider {
 
 a,
 a:visited {
-  color: var(--brand-text);
-  text-decoration: underline;
+    color: var(--brand-text);
+    text-decoration: underline;
 }
 
 a:hover,
 a:active {
-  color: var(--brand-text-dark);
-  text-decoration: underline;
+    color: var(--brand-text-dark);
+    text-decoration: underline;
+}
+
+div.content__footer {
+    position: relative;
+    /* z-index: 2; */
+    background-color: var(--brand-background);
+    padding: 1rem 4%;
+    margin: 2% auto;
+    border: var(--brand-text) 3px solid;
+    width: 80vw;
+    max-width: 48rem;
+    border-radius: 8px;
 }
