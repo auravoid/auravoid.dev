@@ -7,6 +7,7 @@
     --brand-background: hsl(0, 0%, 69%);
     --brand-background-light: hsl(0, 0%, 78%);
     --brand-background-dark: hsl(0, 0%, 50%);
+    --brand-background-slight: hsl(0, 0%, 74%);
     /* Text colors */
     --brand-text: hsl(0, 0%, 20%);
     --brand-text-light: hsl(0, 0%, 10%);
@@ -19,6 +20,7 @@
     --brand-background: hsl(240, 4%, 5%);
     --brand-background-light: hsl(240, 4%, 13%);
     --brand-background-dark: hsl(240, 4%, 2%);
+    --brand-background-slight: hsl(240, 4%, 7%);
     /* Text colors */
     --brand-text: hsl(0, 0%, 78%);
     --brand-text-light: hsl(0, 0%, 100%);
