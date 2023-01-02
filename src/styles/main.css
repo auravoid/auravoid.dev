@@ -14,7 +14,6 @@ body {
 
 div.content__main {
     position: relative;
-    /* z-index: 2; */
     background-color: var(--brand-background);
     padding: 3% 4%;
     margin: 3% auto 0 auto;
@@ -36,7 +35,13 @@ div.content__main h2 {
 
 hr.content__divider {
     border: var(--brand-text) 1px solid;
-    margin: 1rem 0;
+    margin: 1.3rem 0;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0.3rem 0;
 }
 
 a,
@@ -53,7 +58,6 @@ a:active {
 
 div.content__footer {
     position: relative;
-    /* z-index: 2; */
     background-color: var(--brand-background);
     padding: 1rem 4%;
     margin: 2% auto;

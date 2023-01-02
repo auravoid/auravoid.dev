@@ -1,11 +1,8 @@
 ---
-console.log(import.meta.env);
-console.log("Basic " + import.meta.env.SECRET_WAKAPI_KEY);
 const res = await fetch(
-  "https://cors.auravoid.dev/https://wakapi.auravoid.dev/api/compat/wakatime/v1/users/aura/stats/last_30_days",
+  "https://wakapi.auravoid.dev/api/compat/wakatime/v1/users/aura/stats/last_30_days",
   {
     headers: {
-      Authorization: "Basic " + import.meta.env.SECRET_WAKAPI_KEY,
       "x-requested-with": "https://auravoid.dev",
     },
   }
@@ -35,10 +32,15 @@ const { data } = await res.json();
     padding: 0 5%;
     text-align: center;
   }
+
+  .stats-box h3 {
+    margin: 0;
+    font-size: 24px;
+  }
 </style>
 
 <div class="stats-box">
-  <h3>Top 5 Languages in the Past 30 Days</h3>
+  <h3>Langs in the Past 30 Days</h3>
   <br />
   <table id="langs">
     <tr>
