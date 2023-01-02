@@ -1,8 +1,8 @@
 ---
 const { frontmatter } = Astro.props;
 import Head from "../components/Head.astro";
+import Foot from "../components/Foot.astro";
 import NavBar from "../components/NavBar.astro";
-import Particles from "../components/Particles.astro";
 import "../styles/markdown.css";
 ---
 
@@ -15,12 +15,10 @@ import "../styles/markdown.css";
     />
   </head>
   <body>
-    <Particles />
-    <div id="home-page">
-      <NavBar />
-      <div id="text" class="body-box">
-        <slot />
-      </div>
+    <NavBar />
+    <div class="content__main markdown__body">
+      <slot />
     </div>
+    <Foot />
   </body>
 </html>

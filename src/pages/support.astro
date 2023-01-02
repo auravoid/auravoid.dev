@@ -1,28 +1,21 @@
 ---
 import Head from "../components/Head.astro";
+import Foot from "../components/Foot.astro";
 import NavBar from "../components/NavBar.astro";
-import Particles from "../components/Particles.astro";
 const legalPages = await Astro.glob("../pages/legal/*.md");
 const aboutPages = await Astro.glob("../pages/about/*.md");
 ---
 
 <style>
-  #text > h1,
-  #text > p {
-    text-align: center;
-  }
   .linklist {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     margin: auto;
   }
   .linklist > p {
-    padding: 0.5rem;
+    padding: 1.7rem;
     margin: auto;
     font-size: 14px;
-  }
-  .body-box > p {
-    font-size: 16px;
   }
 </style>
 
@@ -35,34 +28,32 @@ const aboutPages = await Astro.glob("../pages/about/*.md");
     />
   </head>
   <body>
-    <Particles />
-    <div id="home-page">
-      <NavBar />
-      <div id="text" class="body-box">
-        <h1>Support</h1>
-        <p>Here you can find support links for projects I have created.</p>
-        <div id="support-links" class="linklist">
-          {
-            legalPages.map((page) => (
-              <p>
-                <a href={page.url}>{page.frontmatter.title}</a>
-              </p>
-            ))
-          }
-        </div>
-        <hr />
-        <h1>About</h1>
-        <p>Here you can find some things that you'd like to know more about.</p>
-        <div id="about-links" class="linklist">
-          {
-            aboutPages.map((page) => (
-              <p>
-                <a href={page.url}>{page.frontmatter.title}</a>
-              </p>
-            ))
-          }
-        </div>
+    <NavBar />
+    <div class="content__main">
+      <h1>Support</h1>
+      <p>Here you can find support links for projects I have created.</p>
+      <div id="support-links" class="linklist">
+        {
+          legalPages.map((page) => (
+            <p>
+              <a href={page.url}>{page.frontmatter.title}</a>
+            </p>
+          ))
+        }
+      </div>
+      <hr class="content__divider" />
+      <h1>About</h1>
+      <p>Here you can find some things that you'd like to know more about.</p>
+      <div id="about-links" class="linklist">
+        {
+          aboutPages.map((page) => (
+            <p>
+              <a href={page.url}>{page.frontmatter.title}</a>
+            </p>
+          ))
+        }
       </div>
     </div>
+    <Foot />
   </body>
 </html>

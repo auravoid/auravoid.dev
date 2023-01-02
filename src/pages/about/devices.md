@@ -6,8 +6,15 @@ description: "If you want to know stuff about my devices, here's where you can f
 author: "auravoid"
 tags: ["specs"]
 ---
+<center>
+
+# About Devices
+
+---
 
 ## Computer Specs
+
+<br>
 
 | Nickname  | CPU                 | GPU                   | RAM                 | Storage  |
 | --------- | ------------------- | --------------------- | ------------------- | -------- |
@@ -15,7 +22,12 @@ tags: ["specs"]
 | space     | Intel i5-9600K      | None                  | 16GB DDR4 2667MHz   | ~4.5 TB  |
 | steamdeck | AMD Custom APU 0405 | AMD Custom GPU        | 16GB LPDDR5 5500Mhz | 512 GB   |
 
+
+<br>
+
 ## Mobile Specs
+
+<br>
 
 | Carrier  | Brand   | Model           | Storage     |
 | -------- | ------- | --------------- | ----------- |
@@ -24,3 +36,5 @@ tags: ["specs"]
 | TMobile  | LG      | Aristo 5        | 32GB        |
 | Tracfone | Samsung | Galaxy J3 Orbit | 16GB + 16GB |
 | ATT      | Samsung | Galaxy S7       | 32GB        |
+
+</center>

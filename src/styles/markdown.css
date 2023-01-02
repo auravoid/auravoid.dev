@@ -1,16 +1,55 @@
 table {
-  border-collapse: collapse;
-  min-width: 60%;
+    border-collapse: collapse;
+    min-width: 60%;
 }
-tr > td {
-  padding: 0.5rem 0.7rem;
-  border: #5e5e5e 2px solid;
-  font-size: 14px;
+
+tr>td {
+    padding: 0.5rem 0.7rem;
+    border: #5e5e5e 2px solid;
+    font-size: 14px;
 }
-tr > th {
-  padding-bottom: 0.4rem;
+
+tr>th {
+    padding-bottom: 0.4rem;
 }
 
 h2 {
-  font-size: 30px;
+    font-size: 30px;
+}
+
+.markdown__body {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: justify;
+    padding: 0.3rem 4%;
+}
+
+.markdown__body p {
+    margin: 0.01rem auto;
+    text-indent: 2.3ch;
+}
+
+.markdown__body hr {
+    border: var(--brand-text) 1px solid;
+    margin: 1.3rem 0;
+}
+
+.markdown__body h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.markdown__body ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+}
+
+.markdown__body #computer-specs {
+    margin: 0 auto;
+}
+
+.markdown__body #computer-specs>tbody>tr>td {
+    padding: 0.5rem 0.7rem;
+    border: #5e5e5e 2px solid;
+    font-size: 14px;
 }

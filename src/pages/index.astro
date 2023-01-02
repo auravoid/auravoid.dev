@@ -4,6 +4,7 @@ import NavBar from "../components/NavBar.astro";
 import SponsorsList from "../components/home/SponsorsList.astro";
 import PersonalSkills from "../components/home/PersonalSkills.astro";
 import CodingStats from "../components/home/CodingStats.astro";
+import Foot from "../components/Foot.astro";
 ---
 
 <html>
@@ -24,32 +25,6 @@ import CodingStats from "../components/home/CodingStats.astro";
       <hr class="content__divider" />
       <CodingStats />
     </div>
-    <div class="content__footer">
-      <div class="social__icons">
-        <a
-          aria-label="GitHub Icon"
-          href="https://github.com/auravoid"
-          target="_blank"
-        >
-          <i class="fa-brands fa-github"></i>
-        </a>
-        <a
-          aria-label="Discord Icon"
-          href="https://discord.gg/uDzYJBHT6P"
-          target="_blank"
-        >
-          <i class="fa-brands fa-discord"></i>
-        </a>
-        <a
-          aria-label="Mastodon"
-          href="https://wetdry.world/@aura"
-          rel="me"
-          target="_blank"
-        >
-          <i class="fa-brands fa-mastodon"></i>
-        </a>
-      </div>
-      <p>&copy; {new Date().getFullYear()} auravoid</p>
-    </div>
+    <Foot />
   </body>
 </html>
