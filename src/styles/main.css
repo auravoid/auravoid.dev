@@ -66,3 +66,19 @@ div.content__footer {
     max-width: 48rem;
     border-radius: 8px;
 }
+
+div.social__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+div.social__icons a {
+    margin: 0 0.5rem;
+}
+
+div.social__icons a>i {
+    width: 2rem;
+    height: 2rem;
+}
