@@ -5,31 +5,43 @@
   #cookiePopup {
     position: fixed;
     bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: var(--brand-background-dark);
+    left: 50%;
+    margin-left: -300px;
+    width: 600px;
+    background-color: var(--brand-background);
     color: var(--brand-text);
-    opacity: 90%;
-    padding: 10px;
+    opacity: 95%;
     text-align: center;
     z-index: 9999;
+    border-top: var(--brand-text) 3px solid;
+    border-left: var(--brand-text) 3px solid;
+    border-right: var(--brand-text) 3px solid;
+    border-radius: 8px 8px 0 0;
+    padding: 1rem;
   }
   #cookiePopup a {
     color: var(--brand-text);
   }
+  #cookiePopup p {
+    margin: 0.7rem auto;
+  }
   #acceptCookies {
-    background-color: var(--brand-background);
+    background-color: var(--brand-background-light);
     color: var(--brand-text);
-    border: 1px solid var(--brand-text-darker);
-    padding: 5px;
+    border-radius: 8px;
+    padding: 0.6rem;
     font-family: inherit;
     cursor: pointer;
+  }
+  .privacy {
+    text-decoration: underline;
   }
 </style>
 <div id="cookiePopup">
   <p>
-    By using this website, you agree to the <a href="/legal/privacy"
-      >Privacy Policy</a
+    By using this website, you agree to the <a
+      href="/legal/privacy"
+      class="privacy">Privacy Policy</a
     >.
   </p>
   <button id="acceptCookies">Accept</button>

@@ -1,0 +1,84 @@
+@import url('./colors.css');
+
+body {
+    background: var(--brand-background-dark);
+    text-align: center;
+    color: var(--brand-text);
+    font-family: "Fira Mono", monospace;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+div.content__main {
+    position: relative;
+    background-color: var(--brand-background);
+    padding: 3% 4%;
+    margin: 3% auto 0 auto;
+    border: var(--brand-text) 3px solid;
+    width: 80vw;
+    max-width: 48rem;
+    border-radius: 8px;
+}
+
+div.content__main h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+div.content__main h2 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+hr.content__divider {
+    border: var(--brand-text) 1px solid;
+    margin: 1.3rem 0;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0.3rem 0;
+}
+
+a,
+a:visited {
+    color: var(--brand-text);
+    text-decoration: underline;
+}
+
+a:hover,
+a:active {
+    color: var(--brand-text-dark);
+    text-decoration: underline;
+}
+
+div.content__footer {
+    position: relative;
+    background-color: var(--brand-background);
+    padding: 1rem 4%;
+    margin: 2% auto;
+    border: var(--brand-text) 3px solid;
+    width: 80vw;
+    max-width: 48rem;
+    border-radius: 8px;
+}
+
+div.social__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+div.social__icons a {
+    margin: 0 0.5rem;
+}
+
+div.social__icons a>i {
+    width: 2rem;
+    height: 2rem;
+}

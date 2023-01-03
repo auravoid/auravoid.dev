@@ -16,8 +16,15 @@ if (commands["Menu"]) {
 }
 ---
 
+<style>
+  .category-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 72%;
+  }
+</style>
+
 <div>
-  <h1>Commands</h1>
   <div id="commands">
     {
       Object.entries(commands).map(([key]) => (
