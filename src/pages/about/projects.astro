@@ -3,10 +3,11 @@ import Head from "../../components/Head.astro";
 import NavBar from "../../components/NavBar.astro";
 import Foot from "../../components/Foot.astro";
 import MyProjects from "../../components/home/MyProjects.astro";
+import MyContributions from "../../components/home/MyContributions.astro";
 
 export const frontmatter = {
   title: "About Projects",
-  description: "A decently made list of things I've made.",
+  description: "A decently made list of things I've made and helped with.",
 };
 ---
 
@@ -22,6 +23,11 @@ export const frontmatter = {
       <h1>My Projects</h1>
       <p>A decently made list of things I've made and wish to share.</p>
       <MyProjects />
+    </div>
+    <div class="content__main">
+      <h1>My Contributions</h1>
+      <p>A list of things I've contributed to.</p>
+      <MyContributions />
     </div>
     <Foot />
   </body>
