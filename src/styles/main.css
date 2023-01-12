@@ -82,3 +82,30 @@ div.social__icons a>i {
     width: 2rem;
     height: 2rem;
 }
+
+div.projects__content {
+    border: var(--brand-text) 3px solid;
+    border-radius: 8px;
+    padding: 1.7rem;
+    margin: 1rem auto;
+    max-width: 48rem;
+    background: var(--brand-background-slight);
+}
+
+div.projects__content__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+p.projects__content__item {
+    margin: 0;
+    padding: 0.3rem 0;
+}
+
+p.projects__content__desc {
+    margin: auto;
+    padding: 0.7rem;
+}

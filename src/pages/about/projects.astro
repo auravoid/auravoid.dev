@@ -1,0 +1,28 @@
+---
+import Head from "../../components/Head.astro";
+import NavBar from "../../components/NavBar.astro";
+import Foot from "../../components/Foot.astro";
+import MyProjects from "../../components/home/MyProjects.astro";
+
+export const frontmatter = {
+  title: "About Projects",
+  description: "A decently made list of things I've made.",
+};
+---
+
+<html>
+  <Head
+    title="About Projects"
+    description="A decently made list of things I've made."
+    color="#feb9db"
+  />
+  <body>
+    <NavBar />
+    <div class="content__main">
+      <h1>My Projects</h1>
+      <p>A decently made list of things I've made and wish to share.</p>
+      <MyProjects />
+    </div>
+    <Foot />
+  </body>
+</html>

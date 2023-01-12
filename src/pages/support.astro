@@ -3,7 +3,7 @@ import Head from "../components/Head.astro";
 import Foot from "../components/Foot.astro";
 import NavBar from "../components/NavBar.astro";
 const legalPages = await Astro.glob("../pages/legal/*.md");
-const aboutPages = await Astro.glob("../pages/about/*.md");
+const aboutPages = await Astro.glob("../pages/about/*.{md,astro}");
 ---
 
 <style>
