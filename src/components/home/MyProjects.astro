@@ -15,8 +15,8 @@ type Project = {
   license: string;
 };
 
-const [aiOhto, funResp, website]: any = await Promise.all(
-  ["ai-ohto", "fun-responses", "auravoid.dev"].map((repo) =>
+const [aiOhto, funResp, website, dbotsApi]: any = await Promise.all(
+  ["ai-ohto", "fun-responses", "auravoid.dev", "dbots-api"].map((repo) =>
     octokit
       .request("GET /repos/{owner}/{repo}", {
         owner: "auravoid",
@@ -53,6 +53,15 @@ const projects: Project[] = [
     forks: website.forks_count || 0,
     lang: website.language,
     license: website.license?.spdx_id || "None",
+  },
+  {
+    name: dbotsApi.name,
+    description: dbotsApi.description,
+    url: dbotsApi.html_url,
+    stars: dbotsApi.stargazers_count || 0,
+    forks: dbotsApi.forks_count || 0,
+    lang: dbotsApi.language,
+    license: dbotsApi.license?.spdx_id || "None",
   },
 ];
 ---
