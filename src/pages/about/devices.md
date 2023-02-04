@@ -6,6 +6,7 @@ description: "If you want to know stuff about my devices, here's where you can f
 author: "auravoid"
 tags: ["specs"]
 ---
+
 <center>
 
 # About Devices
@@ -21,7 +22,6 @@ tags: ["specs"]
 | void      | AMD Ryzen 7 5800X   | AMD Radeon RX 6600 XT | 32GB DDR4 3200MHz   | ~2.63 TB |
 | space     | Intel i5-9600K      | None                  | 16GB DDR4 2667MHz   | ~4.5 TB  |
 | steamdeck | AMD Custom APU 0405 | AMD Custom GPU        | 16GB LPDDR5 5500Mhz | 512 GB   |
-
 
 <br>
 
