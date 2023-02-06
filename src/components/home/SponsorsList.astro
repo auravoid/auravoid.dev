@@ -18,56 +18,53 @@ if (sponsors.length === 0) {
 ---
 
 <style>
-  .sponsor-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    margin: auto;
-  }
-  .sponsor-grid > p {
-    padding: 0.5rem;
-    margin: auto;
-  }
-  .sponsor-grid > a {
-    display: block;
-    padding: 0.5rem;
-    margin: auto;
-  }
-  .sponsor-grid img {
-    border-radius: 50%;
-  }
-  .sponsor-me a {
-    color: unset;
-    text-decoration: underline;
-  }
-
   .sponsor-me h3 {
     margin: 0;
     font-size: 24px;
   }
+
+  .sponsor-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .sponsor {
+    width: 50px;
+    height: 50px;
+    margin: 0.4rem 1.2rem;
+  }
+  .sponsor > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
 </style>
 
 <div class="sponsor-me">
-  <a href="https://github.com/sponsors/auravoid">
-    <h2>My Sponsors</h2>
-  </a>
+  <h2>My Sponsors</h2>
   <div class="sponsor-grid">
     {
       Object.entries(sponsors).map(([person]) => {
         return (
           <a
             href={sponsors[person].profile}
-            rel="noopener noreferrer"
+            rel="noopener"
             target="_blank"
+            class="sponsor"
           >
-            <img
-              alt={sponsors[person].handle}
-              src={sponsors[person].avatar}
-              width="48px"
-              height="48px"
-            />
+            <img alt={sponsors[person].handle} src={sponsors[person].avatar} />
           </a>
         );
       })
     }
   </div>
+  <br />
+  <p>
+    <a
+      href="https://github.com/sponsors/auravoid/"
+      rel="noopener"
+      target="_blank">Become a Sponsor on GitHub!</a
+    >
+  </p>
 </div>
