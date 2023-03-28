@@ -1,70 +1,73 @@
 ---
 const res = await fetch(
-  "https://cors.auravoid.dev/https://sponsors.trnck.dev/sponsors/auravoid",
-  {
-    headers: {
-      "x-requested-with": "https://auravoid.dev",
-    },
-  }
-);
-const { sponsors } = await res.json();
+	"https://cors.auravoid.dev/https://sponsors.trnck.dev/sponsors/auravoid",
+	{
+		headers: {
+			"x-requested-with": "https://auravoid.dev",
+		},
+	}
+)
+const { sponsors } = await res.json()
 if (sponsors.length === 0) {
-  sponsors.push({
-    id: 0,
-    handle: "No Sponsors Yet!",
-    profile: "https://github.com/sponsors/auravoid",
-  });
+	sponsors.push({
+		id: 0,
+		handle: "No Sponsors Yet!",
+		profile: "https://github.com/sponsors/auravoid",
+	})
 }
 ---
 
 <style>
-  .sponsor-me h3 {
-    margin: 0;
-    font-size: 24px;
-  }
+	.sponsor-me h3 {
+		margin: 0;
+		font-size: 24px;
+	}
 
-  .sponsor-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+	.sponsor-grid {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 
-  .sponsor {
-    width: 50px;
-    height: 50px;
-    margin: 0.4rem 1.2rem;
-  }
-  .sponsor > img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-  }
+	.sponsor {
+		width: 50px;
+		height: 50px;
+		margin: 0.4rem 1.2rem;
+	}
+	.sponsor > img {
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+	}
 </style>
 
 <div class="sponsor-me">
-  <h2>My Sponsors</h2>
-  <div class="sponsor-grid">
-    {
-      Object.entries(sponsors).map(([person]) => {
-        return (
-          <a
-            href={sponsors[person].profile}
-            rel="noopener"
-            target="_blank"
-            class="sponsor"
-          >
-            <img alt={sponsors[person].handle} src={sponsors[person].avatar} />
-          </a>
-        );
-      })
-    }
-  </div>
-  <br />
-  <p>
-    <a
-      href="https://github.com/sponsors/auravoid/"
-      rel="noopener"
-      target="_blank">Become a Sponsor on GitHub!</a
-    >
-  </p>
+	<h2>My Sponsors</h2>
+	<div class="sponsor-grid">
+		{
+			Object.entries(sponsors).map(([person]) => {
+				return (
+					<a
+						href={sponsors[person].profile}
+						rel="noopener"
+						target="_blank"
+						class="sponsor"
+					>
+						<img
+							alt={sponsors[person].handle}
+							src={sponsors[person].avatar}
+						/>
+					</a>
+				)
+			})
+		}
+	</div>
+	<br />
+	<p>
+		<a
+			href="https://github.com/sponsors/auravoid/"
+			rel="noopener"
+			target="_blank">Become a Sponsor on GitHub!</a
+		>
+	</p>
 </div>

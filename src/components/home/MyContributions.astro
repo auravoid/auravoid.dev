@@ -1,69 +1,71 @@
 ---
-import { Octokit } from "octokit";
-const { SECRET_GITHUB_TOKEN } = import.meta.env;
+import { Octokit } from "octokit"
+const { SECRET_GITHUB_TOKEN } = import.meta.env
 const octokit = new Octokit({
-  auth: SECRET_GITHUB_TOKEN,
-});
+	auth: SECRET_GITHUB_TOKEN,
+})
 
 type Project = {
-  name: string;
-  description: string;
-  url: string;
-  stars: number;
-  forks: number;
-  lang: string;
-  license: string;
-};
+	name: string
+	description: string
+	url: string
+	stars: number
+	forks: number
+	lang: string
+	license: string
+}
 
 const [worker, milk]: any = await Promise.all(
-  [
-    { owner: "erisa", repo: "worker-links" },
-    { owner: "FloatingMilkshake", repo: "MechanicalMilkshake" },
-  ].map((item) =>
-    octokit
-      .request("GET /repos/{owner}/{repo}", {
-        owner: item.owner,
-        repo: item.repo,
-      })
-      .then((response) => response.data)
-  )
-);
+	[
+		{ owner: "erisa", repo: "worker-links" },
+		{ owner: "FloatingMilkshake", repo: "MechanicalMilkshake" },
+	].map((item) =>
+		octokit
+			.request("GET /repos/{owner}/{repo}", {
+				owner: item.owner,
+				repo: item.repo,
+			})
+			.then((response) => response.data)
+	)
+)
 
 const projects: Project[] = [
-  {
-    name: worker.full_name,
-    description: worker.description,
-    url: worker.html_url,
-    stars: worker.stargazers_count || 0,
-    forks: worker.forks_count || 0,
-    lang: worker.language,
-    license: worker.license?.spdx_id || "None",
-  },
-  {
-    name: milk.full_name,
-    description: milk.description,
-    url: milk.html_url,
-    stars: milk.stargazers_count || 0,
-    forks: milk.forks_count || 0,
-    lang: milk.language,
-    license: milk.license?.spdx_id || "None",
-  },
-];
+	{
+		name: worker.full_name,
+		description: worker.description,
+		url: worker.html_url,
+		stars: worker.stargazers_count || 0,
+		forks: worker.forks_count || 0,
+		lang: worker.language,
+		license: worker.license?.spdx_id || "None",
+	},
+	{
+		name: milk.full_name,
+		description: milk.description,
+		url: milk.html_url,
+		stars: milk.stargazers_count || 0,
+		forks: milk.forks_count || 0,
+		lang: milk.language,
+		license: milk.license?.spdx_id || "None",
+	},
+]
 ---
 
 {
-  projects.map((project) => (
-    <div class="projects__content">
-      <a href={project.url} class="projects__content__url">
-        <h2 class="projects__content__title">{project.name}</h2>
-      </a>
-      <p class="projects__content__desc">{project.description}</p>
-      <div class="projects__content__info">
-        <p class="projects__content__item">Stars: {project.stars}</p>
-        <p class="projects__content__item">Forks: {project.forks}</p>
-        <p class="projects__content__item">Language: {project.lang}</p>
-        <p class="projects__content__item">License: {project.license}</p>
-      </div>
-    </div>
-  ))
+	projects.map((project) => (
+		<div class="projects__content">
+			<a href={project.url} class="projects__content__url">
+				<h2 class="projects__content__title">{project.name}</h2>
+			</a>
+			<p class="projects__content__desc">{project.description}</p>
+			<div class="projects__content__info">
+				<p class="projects__content__item">Stars: {project.stars}</p>
+				<p class="projects__content__item">Forks: {project.forks}</p>
+				<p class="projects__content__item">Language: {project.lang}</p>
+				<p class="projects__content__item">
+					License: {project.license}
+				</p>
+			</div>
+		</div>
+	))
 }

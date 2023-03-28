@@ -1,24 +1,24 @@
 ---
-const { frontmatter } = Astro.props;
-import Head from "../components/Head.astro";
-import Foot from "../components/Foot.astro";
-import NavBar from "../components/NavBar.astro";
-import "../styles/markdown.css";
+const { frontmatter } = Astro.props
+import Head from "../components/Head.astro"
+import Foot from "../components/Foot.astro"
+import NavBar from "../components/NavBar.astro"
+import "../styles/markdown.css"
 ---
 
 <html lang="en-US">
-  <head>
-    <Head
-      title={frontmatter.title}
-      description={frontmatter.description}
-      color="#feb9db"
-    />
-  </head>
-  <body>
-    <NavBar />
-    <div class="content__main markdown__body">
-      <slot />
-    </div>
-    <Foot />
-  </body>
+	<head>
+		<Head
+			title={frontmatter.title}
+			description={frontmatter.description}
+			color="#feb9db"
+		/>
+	</head>
+	<body>
+		<NavBar />
+		<div class="content__main markdown__body">
+			<slot />
+		</div>
+		<Foot />
+	</body>
 </html>

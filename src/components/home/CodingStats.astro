@@ -1,67 +1,67 @@
 ---
 const res = await fetch(
-  "https://wakapi.auravoid.dev/api/compat/wakatime/v1/users/aura/stats/last_30_days",
-  {
-    headers: {
-      "x-requested-with": "https://auravoid.dev",
-    },
-  }
-);
-const { data } = await res.json();
+	"https://wakapi.auravoid.dev/api/compat/wakatime/v1/users/aura/stats/last_30_days",
+	{
+		headers: {
+			"x-requested-with": "https://auravoid.dev",
+		},
+	}
+)
+const { data } = await res.json()
 ---
 
 <style>
-  #langs {
-    width: 80%;
-    margin: auto;
-    border-collapse: collapse;
-  }
-  .language-name,
-  .language-time {
-    padding: 0.5rem;
-    border: #5e5e5e 2px solid;
-    width: 10em;
-  }
-  .language-name {
-    text-align: right;
-  }
-  .language-time {
-    text-align: left;
-  }
-  .stats-box {
-    padding: 0 5%;
-    text-align: center;
-  }
+	#langs {
+		width: 80%;
+		margin: auto;
+		border-collapse: collapse;
+	}
+	.language-name,
+	.language-time {
+		padding: 0.5rem;
+		border: #5e5e5e 2px solid;
+		width: 10em;
+	}
+	.language-name {
+		text-align: right;
+	}
+	.language-time {
+		text-align: left;
+	}
+	.stats-box {
+		padding: 0 5%;
+		text-align: center;
+	}
 
-  .stats-box h3 {
-    margin: 0;
-    font-size: 24px;
-  }
-  td > h3 {
-    margin: 0;
-    font-size: 18px;
-  }
+	.stats-box h3 {
+		margin: 0;
+		font-size: 24px;
+	}
+	td > h3 {
+		margin: 0;
+		font-size: 18px;
+	}
 </style>
 
 <div class="stats-box">
-  <h2>Langs in the Past 30 Days</h2>
-  <br />
-  <table id="langs">
-    <tr>
-      <td class="language-name">
-        <h3>Language</h3>
-      </td>
-      <td class="language-time">
-        <h3>Time Used</h3>
-      </td>
-    </tr>
-    {
-      Object.entries(data.languages.slice(0, 5)).map(([item]) => (
-        <tr>
-          <td class="language-name">{data.languages[item].name}</td>
-          <td class="language-time">{data.languages[item].text}</td>
-        </tr>
-      ))
-    }
-  </table>
+	<h2>Langs in the Past 30 Days</h2>
+	<br />
+	<table id="langs">
+		<tr>
+			<td class="language-name">
+				<h3>Language</h3>
+			</td>
+			<td class="language-time">
+				<h3>Time Used</h3>
+			</td>
+		</tr>
+		{
+			Object.entries(data.languages.slice(0, 5)).map(([item]) => (
+				<tr>
+					<td class="language-name">{data.languages[item].name}</td>
+					<td class="language-time">{data.languages[item].text}</td>
+				</tr>
+			))
+		}
+	</table>
 </div>

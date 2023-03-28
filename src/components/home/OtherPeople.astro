@@ -1,98 +1,102 @@
 ---
 type Person = {
-  name: string;
-  icon: string;
-  link: string;
-};
+	name: string
+	icon: string
+	link: string
+}
 const people: Person[] = [
-  {
-    name: "kot",
-    icon: "https://avatars.githubusercontent.com/kotx",
-    link: "https://yukata.tech/",
-  },
-  {
-    name: "ven",
-    icon: "https://avatars.githubusercontent.com/vendicated",
-    link: "https://vendicated.dev/",
-  },
-  {
-    name: "erisa",
-    icon: "https://avatars.githubusercontent.com/erisa",
-    link: "https://erisa.uk/",
-  },
-  {
-    name: "ovy",
-    icon: "https://avatars.githubusercontent.com/ovyerus",
-    link: "https://ovyerus.com/",
-  },
-  {
-    name: "milkshake",
-    icon: "https://avatars.githubusercontent.com/floatingmilkshake",
-    link: "https://floatingmilkshake.com/",
-  },
-  {
-    name: "ziad",
-    icon: "https://avatars.githubusercontent.com/ziad8727",
-    link: "https://ziad87.net/",
-  },
-  {
-    name: "megu",
-    icon: "https://avatars.githubusercontent.com/meguminsama",
-    link: "https://megu.dev/",
-  },
-  {
-    name: "lewi",
-    icon: "https://avatars.githubusercontent.com/lewisakura",
-    link: "https://lewisakura.moe/",
-  },
-  {
-    name: "spotlight",
-    icon: "https://avatars.githubusercontent.com/spotlightishere",
-    link: "https://joscomputing.space/",
-  },
-  {
-    name: "chloe",
-    icon: "https://avatars.githubusercontent.com/solelychloe",
-    link: "https://arciniega.one/",
-  }
-];
+	{
+		name: "kot",
+		icon: "https://avatars.githubusercontent.com/kotx",
+		link: "https://yukata.tech/",
+	},
+	{
+		name: "ven",
+		icon: "https://avatars.githubusercontent.com/vendicated",
+		link: "https://vendicated.dev/",
+	},
+	{
+		name: "erisa",
+		icon: "https://avatars.githubusercontent.com/erisa",
+		link: "https://erisa.uk/",
+	},
+	{
+		name: "ovy",
+		icon: "https://avatars.githubusercontent.com/ovyerus",
+		link: "https://ovyerus.com/",
+	},
+	{
+		name: "milkshake",
+		icon: "https://avatars.githubusercontent.com/floatingmilkshake",
+		link: "https://floatingmilkshake.com/",
+	},
+	{
+		name: "ziad",
+		icon: "https://avatars.githubusercontent.com/ziad8727",
+		link: "https://ziad87.net/",
+	},
+	{
+		name: "megu",
+		icon: "https://avatars.githubusercontent.com/meguminsama",
+		link: "https://megu.dev/",
+	},
+	{
+		name: "lewi",
+		icon: "https://avatars.githubusercontent.com/lewisakura",
+		link: "https://lewisakura.moe/",
+	},
+	{
+		name: "spotlight",
+		icon: "https://avatars.githubusercontent.com/spotlightishere",
+		link: "https://joscomputing.space/",
+	},
+	{
+		name: "chloe",
+		icon: "https://avatars.githubusercontent.com/solelychloe",
+		link: "https://arciniega.one/",
+	},
+]
 
-people.sort(() => Math.random() - 0.5);
+people.sort(() => Math.random() - 0.5)
 ---
 
 <style>
-  .people-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+	.people-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 
-  .person {
-    width: 50px;
-    height: 50px;
-    margin: 0.4rem 1.2rem;
-  }
-  .person > img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-  }
+	.person {
+		width: 50px;
+		height: 50px;
+		margin: 0.4rem 1.2rem;
+	}
+	.person > img {
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+	}
 </style>
 
 <div id="other-people">
-  <h2>Other People to Check Out</h2>
-  <br />
-  <div class="people-wrapper">
-    {
-      people.map((person) => (
-        <a
-          href={person.link}
-          aria-label={person.name + "'s website"}
-          class="person"
-        >
-          <img src={person.icon} alt={person.name} class="person-link" />
-        </a>
-      ))
-    }
-  </div>
+	<h2>Other People to Check Out</h2>
+	<br />
+	<div class="people-wrapper">
+		{
+			people.map((person) => (
+				<a
+					href={person.link}
+					aria-label={person.name + "'s website"}
+					class="person"
+				>
+					<img
+						src={person.icon}
+						alt={person.name}
+						class="person-link"
+					/>
+				</a>
+			))
+		}
+	</div>
 </div>

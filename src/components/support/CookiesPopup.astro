@@ -2,76 +2,76 @@
 ---
 
 <style>
-  #cookiePopup {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    margin-left: -300px;
-    width: 600px;
-    background-color: var(--brand-background);
-    color: var(--brand-text);
-    opacity: 95%;
-    text-align: center;
-    z-index: 9999;
-    border-top: var(--brand-text) 3px solid;
-    border-left: var(--brand-text) 3px solid;
-    border-right: var(--brand-text) 3px solid;
-    border-radius: 8px 8px 0 0;
-    padding: 1rem;
-  }
-  #cookiePopup a {
-    color: var(--brand-text);
-  }
-  #cookiePopup p {
-    margin: 0.7rem auto;
-  }
-  #acceptCookies {
-    background-color: var(--brand-background-light);
-    color: var(--brand-text);
-    border-radius: 8px;
-    padding: 0.6rem;
-    font-family: inherit;
-    cursor: pointer;
-  }
-  .privacy {
-    text-decoration: underline;
-  }
+	#cookiePopup {
+		position: fixed;
+		bottom: 0;
+		left: 50%;
+		margin-left: -300px;
+		width: 600px;
+		background-color: var(--brand-background);
+		color: var(--brand-text);
+		opacity: 95%;
+		text-align: center;
+		z-index: 9999;
+		border-top: var(--brand-text) 3px solid;
+		border-left: var(--brand-text) 3px solid;
+		border-right: var(--brand-text) 3px solid;
+		border-radius: 8px 8px 0 0;
+		padding: 1rem;
+	}
+	#cookiePopup a {
+		color: var(--brand-text);
+	}
+	#cookiePopup p {
+		margin: 0.7rem auto;
+	}
+	#acceptCookies {
+		background-color: var(--brand-background-light);
+		color: var(--brand-text);
+		border-radius: 8px;
+		padding: 0.6rem;
+		font-family: inherit;
+		cursor: pointer;
+	}
+	.privacy {
+		text-decoration: underline;
+	}
 </style>
 <div id="cookiePopup">
-  <p>
-    By using this website, you agree to the <a
-      href="/legal/privacy"
-      class="privacy">Privacy Policy</a
-    >.
-  </p>
-  <button id="acceptCookies">Accept</button>
-  <script>
-    // When the popup is closed, set a cookie to remember that the user has closed it
-    function setCookie(cname, cvalue, exdays) {
-      let d = new Date();
-      d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
-      let expires = "expires=" + d.toUTCString();
-      document.cookie =
-        cname + "=" + cvalue + ";" + expires + ";path=/;SameSite=Lax";
-    }
+	<p>
+		By using this website, you agree to the <a
+			href="/legal/privacy"
+			class="privacy">Privacy Policy</a
+		>.
+	</p>
+	<button id="acceptCookies">Accept</button>
+	<script>
+		// When the popup is closed, set a cookie to remember that the user has closed it
+		function setCookie(cname, cvalue, exdays) {
+			let d = new Date()
+			d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000)
+			let expires = "expires=" + d.toUTCString()
+			document.cookie =
+				cname + "=" + cvalue + ";" + expires + ";path=/;SameSite=Lax"
+		}
 
-    // Get the cookie popup
-    let cookiePopup = document.getElementById("cookiePopup");
-    // Get the button that closes the cookie popup
-    let acceptCookies = document.getElementById("acceptCookies");
-    // When the user clicks on the button, close the cookie popup
-    acceptCookies.onclick = function () {
-      cookiePopup.style.display = "none";
-      setCookie("cookiePopup", "true", 30);
-    };
+		// Get the cookie popup
+		let cookiePopup = document.getElementById("cookiePopup")
+		// Get the button that closes the cookie popup
+		let acceptCookies = document.getElementById("acceptCookies")
+		// When the user clicks on the button, close the cookie popup
+		acceptCookies.onclick = function () {
+			cookiePopup.style.display = "none"
+			setCookie("cookiePopup", "true", 30)
+		}
 
-    // Check if the cookie exists
-    if (document.cookie.indexOf("cookiePopup") >= 0) {
-      // If the cookie exists, hide the cookie popup
-      cookiePopup.style.display = "none";
-    } else {
-      // If the cookie does not exist, show the cookie popup
-      cookiePopup.style.display = "block";
-    }
-  </script>
+		// Check if the cookie exists
+		if (document.cookie.indexOf("cookiePopup") >= 0) {
+			// If the cookie exists, hide the cookie popup
+			cookiePopup.style.display = "none"
+		} else {
+			// If the cookie does not exist, show the cookie popup
+			cookiePopup.style.display = "block"
+		}
+	</script>
 </div>

@@ -3,128 +3,128 @@
 
 html,
 body {
-  margin: 0;
-  font-family: "Poppins", sans-serif !important;
-  background: hsl(52, 100%, 52%);
+	margin: 0;
+	font-family: "Poppins", sans-serif !important;
+	background: hsl(52, 100%, 52%);
 }
 
 .content-block {
-  box-sizing: unset;
-  width: 80vw;
-  margin: 0 auto;
-  padding: 2.5% 6.5%;
-  background: #36393f;
-  color: #fff;
-  max-width: 860px;
-  height: 100%;
+	box-sizing: unset;
+	width: 80vw;
+	margin: 0 auto;
+	padding: 2.5% 6.5%;
+	background: #36393f;
+	color: #fff;
+	max-width: 860px;
+	height: 100%;
 }
 
 .content-block h3 {
-  text-align: center;
-  font-size: 20px;
+	text-align: center;
+	font-size: 20px;
 }
 
 .content-block h2 {
-  font-size: 26px;
-  margin: 2rem 0;
+	font-size: 26px;
+	margin: 2rem 0;
 }
 
 .content-block h1 {
-  text-align: center;
-  font-size: 32px;
+	text-align: center;
+	font-size: 32px;
 }
 
 .content-block hr {
-  margin: 4.5rem 0;
-  width: 100%;
-  border: 0;
-  border-top: 1px solid #fff;
+	margin: 4.5rem 0;
+	width: 100%;
+	border: 0;
+	border-top: 1px solid #fff;
 }
 
 .mention {
-  border-radius: 3px;
-  padding: 1px 2px;
-  background: hsla(235, 85.6%, 64.7%, 0.3);
-  color: hsl(236, 83.3%, 92.9%);
-  font-weight: 475;
+	border-radius: 3px;
+	padding: 1px 2px;
+	background: hsla(235, 85.6%, 64.7%, 0.3);
+	color: hsl(236, 83.3%, 92.9%);
+	font-weight: 475;
 }
 
 .mention:hover {
-  background: hsla(235, 85.6%, 64.7%, 0.5);
-  cursor: pointer;
+	background: hsla(235, 85.6%, 64.7%, 0.5);
+	cursor: pointer;
 }
 
 a,
 a:after,
 a:hover,
 a:active {
-  color: hsl(236, 83.3%, 92.9%);
+	color: hsl(236, 83.3%, 92.9%);
 }
 
 .icon {
-  width: 196px;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  border-radius: 50%;
+	width: 196px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	border-radius: 50%;
 }
 
 #command-list {
-  width: 80%;
-  border-collapse: collapse;
-  margin: auto;
+	width: 80%;
+	border-collapse: collapse;
+	margin: auto;
 }
 
 h2 {
-  text-align: center;
+	text-align: center;
 }
 
 .category-name {
-  border: 3px solid #808080;
-  width: fit-content;
-  padding: 5px;
-  margin: auto !important;
+	border: 3px solid #808080;
+	width: fit-content;
+	padding: 5px;
+	margin: auto !important;
 }
 
 /* Table Styling */
 table {
-  border-collapse: collapse;
-  margin: 0 auto;
-  width: 60%;
+	border-collapse: collapse;
+	margin: 0 auto;
+	width: 60%;
 }
 
 table td {
-  padding: 1rem;
-  border: 3px solid #808080;
+	padding: 1rem;
+	border: 3px solid #808080;
 }
 
 table tr:first-child td {
-  border-top: 0;
+	border-top: 0;
 }
 
 table tr td:first-child {
-  border-left: 0;
-  text-align: center;
-  width: 50%;
+	border-left: 0;
+	text-align: center;
+	width: 50%;
 }
 
 table tr:last-child td {
-  border-bottom: 0;
+	border-bottom: 0;
 }
 
 table tr td:last-child {
-  border-right: 0;
+	border-right: 0;
 }
 
 /* End Table Styling */
 
 #about-bot p {
-  padding: auto;
-  margin: auto;
-  text-align: center;
+	padding: auto;
+	margin: auto;
+	text-align: center;
 }
 
 #commands {
-  margin: 3rem auto;
+	margin: 3rem auto;
 }
