@@ -1,0 +1,25 @@
+---
+import BaseHead from '@components/BaseHead.astro';
+import ParticlesBackground from '@components/Particles.astro';
+import Sponsors from '@components/Sponsors.astro';
+import Ring from '@components/Ring.astro';
+---
+
+<html lang="en-US">
+  <BaseHead title="aura" description="My simple website." />
+  <body class="bg-background text-primary">
+    <ParticlesBackground />
+    <div
+      class="container mx-auto my-16 px-12 py-8 rounded-md w-1/2 bg-island border-accent border-2"
+    >
+      <h1 class="text-5xl font-bold mb-4 text-center">aura</h1>
+      <p class="text-center text-primary">
+        A simple website. Nothing too special about it.
+      </p>
+      <hr class="border-accent rounded-md my-4 w-2/3 mx-auto" />
+      <Sponsors />
+      <hr class="border-accent rounded-md my-4 w-2/3 mx-auto" />
+      <Ring />
+    </div>
+  </body>
+</html>

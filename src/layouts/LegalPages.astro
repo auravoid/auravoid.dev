@@ -1,0 +1,44 @@
+---
+import BaseHead from '@components/BaseHead.astro';
+import ParticlesBackground from '@components/Particles.astro';
+
+interface LegalPage {
+  frontmatter: {
+    title: string;
+    description: string;
+    updated: string;
+  };
+}
+
+let { frontmatter } = Astro.props as LegalPage;
+
+const date = new Date(frontmatter.updated);
+const formattedDate = date.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  timeZone: 'UTC',
+});
+
+frontmatter.updated = formattedDate;
+---
+
+<html lang="en-US">
+  <BaseHead
+    title={frontmatter.title + ' | aura'}
+    description={frontmatter.description}
+  />
+  <body class="bg-background text-primary">
+    <ParticlesBackground />
+    <div
+      class="container mx-auto my-16 px-12 py-8 rounded-md w-1/2 bg-island border-accent border-2"
+    >
+      <h1 class="text-4xl font-bold mb-4">{frontmatter.title}</h1>
+      <p class="text-sm mb-4">Last updated: {frontmatter.updated}</p>
+      <hr class="border-accent rounded-md mb-4" />
+      <div class="w-full prose">
+        <slot />
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+---
+export interface Friend {
+  name: string;
+  link: string;
+  image: string;
+}
+
+const { name, link, image } = Astro.props as Friend;
+---
+
+<span
+  class="flex flex-wrap justify-evenly gap-3 pt-5 md:justify-normal md:gap-2.5 lg:gap-3"
+>
+  <a
+    href={link}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="flex flex-col items-center"
+  >
+    <img src={image} alt={name} class="h-[31px] w-[88px]" />
+  </a>
+</span>

@@ -1,0 +1,77 @@
+---
+import Particles from 'astro-particles';
+import type { ISourceOptions } from 'tsparticles-engine';
+
+const options: ISourceOptions = {
+  background: {
+    color: 'rgb(26,27,28)',
+  },
+  particles: {
+    number: {
+      value: 350,
+    },
+    move: {
+      direction: 0,
+      enable: true,
+      outModes: {
+        default: 0,
+      },
+      random: true,
+      speed: 0.1,
+      straight: true,
+    },
+    opacity: {
+      animation: {
+        enable: true,
+        speed: 1,
+        sync: false,
+      },
+      value: { min: 0, max: 1 },
+    },
+    size: {
+      value: { min: 1, max: 3 },
+    },
+  },
+};
+---
+
+<script>
+  import { type Container, type Engine } from 'tsparticles-engine';
+  import { loadFull } from 'tsparticles';
+
+  window.particlesInit = async function (engine: Engine) {
+    await loadFull(engine);
+  };
+  window.particlesLoaded = function (container: Container) {
+    console.log('particlesLoaded callback');
+  };
+
+  console.info(
+    '%cUsing %ctsParticles%c for the background. - %chttps://github.com/matteobruni/tsparticles',
+    'color: white;',
+    'color: white; text-decoration: underline;',
+    'color: white;',
+    'color: white; text-decoration: underline; font-weight: bold; font-family: monospace;'
+  );
+</script>
+
+<div id="tsparticles-data">
+  <Particles id="tsparticles" options={options} init="particlesInit" />
+</div>
+
+<style is:global>
+  #tsparticles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+  }
+</style>
+
+<style>
+  #tsparticles-data {
+    display: none;
+  }
+</style>
