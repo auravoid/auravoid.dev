@@ -28,7 +28,7 @@ limited to, the following:
 - The public information provided by Discord about the user who initiates any interaction with the Bot (including future
   updates to the user's public information)
 
-Ai Ohto does not collect any identifying user data. The only data that is stored is the content of messages sent in.
+Ai Ohto does not collect or store any identifying user data. The only data that is stored is the content of messages sent in.
 
 Ai Ohto does not share any data with any third party.
 
@@ -49,8 +49,6 @@ Data is provided by Discord, a third party platform. Discord's Privacy Policy ca
 
 ## Fun Responses
 
-Interpreted as Fun Responses, ("Service", "it", "its"). You, the user, are referred to as "you" or "your".
-
 Fun Responses does not collect any user data.
 
 Fun Responses does not share any data with any third party.
@@ -68,12 +66,13 @@ Websites include, but are not limited to:
 - https://aura.is-a.dev/
 - https://auravoid.link/
 
-These websites processes information provided by the user. This information includes, but is not limited to, the
+These websites process information provided by the user. This information includes, but is not limited to, the
 following:
 
 - IP address
 - User agent
 - Referrer
 
-These websites does not collect any personally identifying user data. All data is processed by Cloudflare, a third party
-service. Cloudflare's Privacy Policy can be found [here](https://www.cloudflare.com/privacypolicy/).
+These websites do not collect any personally identifying user data. All data is processed by Cloudflare, a third party
+service. Cloudflare's Privacy Policy can be found [here](https://www.cloudflare.com/privacypolicy/). Some analytical 
+data is processed by Plausible, another 3rd party service. Plausible's Privacy Policy can be found [here](https://www.plausible.io/privacy).
