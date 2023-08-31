@@ -6,9 +6,11 @@ description: 'A simple set of terms and conditions.'
 author: 'auravoid'
 ---
 
-This document serves as the Terms and Conditions for all services operated by Auravoid ("I", "me", "my"). It is to be read in conjunction with the Privacy Policy. The Privacy Policy can be found [here](/legal/privacy).
+This document serves as the Terms and Conditions for all services operated by Auravoid ("I", "me", "my"). It is to be
+read in conjunction with the Privacy Policy. The Privacy Policy can be found [here](/legal/privacy).
 
-As of the last time this document was updated, no services operated by me collect any identifying user data. The following services operated by me _may_ collect some non-identifying user data.
+As of the last time this document was updated, no services operated by me collect any identifying user data. The
+following services operated by me _may_ collect some non-identifying user data.
 
 It is encouraged that you check up on this page regularly to see if there are any updates.
 
@@ -65,6 +67,8 @@ By using these websites, you agree to the following terms:
 - I reserve the right to terminate these websites at any time without notice.
 - I reserve the right to change these terms at any time without notice.
 
-<sup>1</sup> Cloudflare is a third party service. Cloudflare's Privacy Policy can be found [here](https://www.cloudflare.com/privacypolicy/).
+<sup>1</sup> Cloudflare is a third party service. Cloudflare's Privacy Policy can be found
+[here](https://www.cloudflare.com/privacypolicy/).
 
-<sup>2</sup> Plausible is a third party service. Plausible's Privacy Policy can be found [here](https://plausible.io/privacy).
+<sup>2</sup> Plausible is a third party service. Plausible's Privacy Policy can be found
+[here](https://plausible.io/privacy).

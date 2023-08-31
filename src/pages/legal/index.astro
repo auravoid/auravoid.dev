@@ -1,0 +1,35 @@
+---
+import BaseHead from '@components/BaseHead.astro';
+import ParticlesBackground from '@components/Particles.astro';
+import Footer from '@components/Footer.astro';
+import Navigation from '@components/Navigation.astro';
+---
+
+<html lang="en-US">
+  <BaseHead title="Legal | aura" description="A quick landing page to navigate to my policies and such." />
+  <body class="bg-background text-primary">
+    <ParticlesBackground />
+    <div
+      class="container mx-auto my-16 w-1/2 rounded-md border-2 border-accent bg-island px-12 py-4 max-sm:m-0 max-sm:w-full max-sm:rounded-none"
+    >
+      <Navigation />
+      <h1 class="mb-4 text-center text-5xl font-bold">Legal</h1>
+      <p class="text-center text-primary">A quick landing page to navigate to my policies and such.</p>
+      <div class="my-8 flex flex-col items-center">
+        <a
+          href="/legal/privacy"
+          class="mb-4 w-2/5 rounded-md border-2 border-accent px-4 py-2 text-center text-primary hover:bg-popout"
+        >
+          Privacy Policy
+        </a>
+        <a
+          href="/legal/terms"
+          class="mb-4 w-2/5 rounded-md border-2 border-accent px-4 py-2 text-center text-primary hover:bg-popout"
+        >
+          Terms and Conditions
+        </a>
+      </div>
+      <Footer />
+    </div>
+  </body>
+</html>

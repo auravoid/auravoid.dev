@@ -1,0 +1,47 @@
+---
+import BaseHead from '@components/BaseHead.astro';
+import Mention from '@components/Mention.astro';
+import CommandList from '@components/CommandList.astro';
+---
+
+<html lang="en-US">
+  <BaseHead
+    title="Ai Ohto"
+    description="Ai Ohto is a Discord bot that is designed to be a fun and useful bot for your server. It has a wide variety of commands, and is constantly being updated with new features."
+    color="#ffe009"
+  />
+  <link rel="icon" type="image/icon" href="/ai-ohto/favicon.ico" />
+  <body class="bg-bot-yellow text-primary">
+    <div
+      class="container mx-auto my-4 w-1/2 rounded-md border-2 border-white bg-bot-bg px-12 py-8 max-sm:m-0 max-sm:w-full max-sm:rounded-none"
+    >
+      <img alt="Bot icon" class="mx-auto my-2.5 block h-auto w-[12rem] rounded-full" src="/ai-ohto/bot-icon.webp" />
+      <h1 class="text-center text-4xl font-bold">Ai Ohto</h1>
+      <p class="text-md mx-auto w-4/5 p-2 text-center font-semibold">
+        Ai Ohto is a Discord bot that is designed to be a fun and useful bot for your server. It has a wide variety of
+        commands, and is constantly being updated with new features.
+      </p>
+      <p class="text-md mx-auto w-2/3 p-2 text-center">
+        You can invite Ai Ohto to your server by clicking
+        <a
+          href="https://discord.com/api/oauth2/authorize?client_id=847427963032174613&permissions=388160&scope=bot%20applications.commands"
+          target="_blank"
+          rel="prefetch"
+          class="underline">here</a
+        >.
+      </p>
+      <p class="text-md mx-auto w-4/5 p-2 text-center">
+        For a list of all of Ai Ohto's commands, use
+        <Mention text="/commands" />
+         or scroll down to see a few of them. To suggest new features or send any type of feedback, use
+        <Mention text="/feedback" />
+         .
+      </p>
+      <hr class="mx-auto my-4 w-5/6 rounded-md border-white" />
+      <CommandList />
+      <div class="mx-auto mb-4 w-fit rounded-md border-2 border-white px-4 py-2">
+        &copy; {new Date().getFullYear()} auravoid
+      </div>
+    </div>
+  </body>
+</html>

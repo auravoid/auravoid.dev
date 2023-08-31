@@ -6,17 +6,12 @@ export interface Friend {
 }
 
 const { name, link, image } = Astro.props as Friend;
+
+// I yoinked some code from Chloe's site for this. Go check it out on their site! https://arciniega.one/
 ---
 
-<span
-  class="flex flex-wrap justify-evenly gap-3 pt-5 md:justify-normal md:gap-2.5 lg:gap-3"
->
-  <a
-    href={link}
-    target="_blank"
-    rel="noopener noreferrer"
-    class="flex flex-col items-center"
-  >
+<span class="flex flex-wrap justify-evenly py-0.5">
+  <a href={link} target="_blank" rel="noopener noreferrer prefetch" class="flex flex-col items-center">
     <img src={image} alt={name} class="h-[31px] w-[88px]" />
   </a>
 </span>

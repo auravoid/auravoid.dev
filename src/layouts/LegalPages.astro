@@ -1,6 +1,8 @@
 ---
 import BaseHead from '@components/BaseHead.astro';
 import ParticlesBackground from '@components/Particles.astro';
+import Footer from '@components/Footer.astro';
+import Navigation from '@components/Navigation.astro';
 
 interface LegalPage {
   frontmatter: {
@@ -24,21 +26,20 @@ frontmatter.updated = formattedDate;
 ---
 
 <html lang="en-US">
-  <BaseHead
-    title={frontmatter.title + ' | aura'}
-    description={frontmatter.description}
-  />
+  <BaseHead title={frontmatter.title + ' | aura'} description={frontmatter.description} />
   <body class="bg-background text-primary">
     <ParticlesBackground />
     <div
-      class="container mx-auto my-16 px-12 py-8 rounded-md w-1/2 bg-island border-accent border-2"
+      class="container mx-auto my-16 w-1/2 rounded-md border-2 border-accent bg-island px-12 py-4 max-sm:m-0 max-sm:w-full max-sm:rounded-none"
     >
-      <h1 class="text-4xl font-bold mb-4">{frontmatter.title}</h1>
-      <p class="text-sm mb-4">Last updated: {frontmatter.updated}</p>
-      <hr class="border-accent rounded-md mb-4" />
-      <div class="w-full prose">
+      <Navigation />
+      <h1 class="mb-4 text-center text-5xl font-bold">{frontmatter.title}</h1>
+      <p class="mb-4 text-sm">Last updated: {frontmatter.updated}</p>
+      <hr class="mb-4 rounded-md border-accent" />
+      <div class="prose pb-8">
         <slot />
       </div>
+      <Footer />
     </div>
   </body>
 </html>

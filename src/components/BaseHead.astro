@@ -3,8 +3,9 @@ import Cookies from '@components/Cookies.astro';
 export interface Props {
   title: string;
   description: string;
+  color?: string;
 }
-const { title, description } = Astro.props;
+const { title, description, color } = Astro.props;
 ---
 
 <head>
@@ -12,7 +13,7 @@ const { title, description } = Astro.props;
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="generator" content={Astro.generator} />
-  <meta content="#facade" name="theme-color" />
+  <meta content={color || '#facade'} name="theme-color" />
   <meta name="color-scheme" content="dark light" />
   <link rel="icon" type="image/icon" href="/favicon.png" />
 
@@ -34,20 +35,11 @@ const { title, description } = Astro.props;
   <meta property="twitter:description" content={description} />
 
   <!-- Styles -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
-  />
-  <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    rel="stylesheet"
-  />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" />
 
   <!-- Scripts -->
-  <script
-    defer
-    data-domain="aura.is-a.dev"
-    src="https://plausible.floatingmilkshake.com/js/plausible.js"></script>
+  <script defer data-domain="aura.is-a.dev" src="https://plausible.floatingmilkshake.com/js/plausible.js"></script>
   <script defer src="https://cdn.auravoid.dev/data/made-by-aura.js"></script>
 </head>
 

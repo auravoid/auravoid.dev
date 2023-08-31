@@ -1,0 +1,48 @@
+---
+interface Categories {
+  [key: string]: Category;
+}
+interface Category {
+  [key: string]: Command;
+}
+interface Command {
+  name: string;
+  description: string;
+  id: string;
+  type: number;
+}
+const base = 'https://cors.auravoid.dev/';
+const commands: Categories = await fetch(base + 'https://cdn.auravoid.dev/data/commands.json', {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+    'x-requested-with': 'fetch',
+  },
+}).then((res) => res.json());
+
+if (commands['Menu']) {
+  delete commands['Menu'];
+}
+---
+
+<div class="container mx-auto w-5/6">
+  {
+    Object.keys(commands).map((category) => {
+      return (
+        <div class="mb-4">
+          <h1 class="my-4 text-center text-3xl font-bold">{category}</h1>
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {Object.keys(commands[category]).map((command) => {
+              return (
+                <div class="rounded-lg bg-bot-gray px-6 py-4">
+                  <h1 class="text-xl font-bold">{commands[category][command].name}</h1>
+                  <p class="text-gray-400">{commands[category][command].description}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      );
+    })
+  }
+</div>

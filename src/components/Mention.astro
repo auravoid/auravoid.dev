@@ -1,0 +1,10 @@
+---
+export interface Text {
+  text: string;
+}
+const { text } = Astro.props as Text;
+---
+
+<span class="cursor-pointer rounded-md bg-bot-mention-bg text-bot-mention hover:bg-bot-mention-hover">
+  {text}
+</span>

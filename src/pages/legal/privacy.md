@@ -39,11 +39,11 @@ to, the following:
 - Server IDs
 - Channel IDs
 
-Data is stored by Railway, a third party service. Railway's Privacy Policy can be
-found [here](https://railway.app/legal/privacy).
+Data is stored by Railway, a third party service. Railway's Privacy Policy can be found
+[here](https://railway.app/legal/privacy).
 
-Data is provided by Discord, a third party platform. Discord's Privacy Policy can be
-found [here](https://discord.com/privacy).
+Data is provided by Discord, a third party platform. Discord's Privacy Policy can be found
+[here](https://discord.com/privacy).
 
 ---
 

@@ -8,6 +8,13 @@ module.exports = {
         popout: 'rgb(28,29,30)',
         island: 'rgb(21,20,20)',
         accent: 'rgb(250,202,222)',
+
+        'bot-yellow': 'rgb(255,224,9)',
+        'bot-gray': 'rgb(30, 31, 34)',
+        'bot-bg': 'rgb(54,57,63)',
+        'bot-mention-bg': 'rgba(88,101,242,0.3)',
+        'bot-mention-hover': 'rgba(88,101,242,0.5)',
+        'bot-mention': 'rgb(222,224,252)',
       },
       typography: {
         DEFAULT: {

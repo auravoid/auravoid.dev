@@ -4,21 +4,19 @@
 
 <div
   id="cookiePopup"
-  class="fixed bottom-0 left-0 right-0 py-4 px-8 border-t-2 border-accent justify-between items-center hidden bg-popout"
+  class="fixed bottom-0 left-0 right-0 hidden items-center justify-between border-t-2 border-accent bg-popout px-8 py-4 max-sm:text-sm"
 >
-  <p class="text-sm text-primary">
-    I use cookies to improve your experience on this site. By continuing to use
-    this site, you consent to my use of cookies. 🍪
+  <p class="text-sm text-primary max-sm:w-fit">
+    I use cookies to improve your experience on this site. By continuing to use this site, you consent to my use of
+    cookies. 🍪
   </p>
-  <p class="text-sm text-primary">
+  <p class="flex flex-wrap text-sm text-primary">
     <a
-      href="legal/privacy"
-      class="text-primary rounded text-md border-2 border-dark-background py-2 px-4"
-      >Learn more</a
+      href="/legal/privacy"
+      class="text-md border-dark-background rounded border-2 px-4 py-2 text-primary"
+      rel="prefetch-intent">Learn more</a
     >
-    <button
-      id="acceptCookies"
-      class="ml-4 py-2 px-4 text-primary rounded text-md border-2 border-dark-background"
+    <button id="acceptCookies" class="text-md border-dark-background ml-4 rounded border-2 px-4 py-2 text-primary"
       >Dismiss
     </button>
   </p>
@@ -45,8 +43,6 @@
       showCookiePopup();
     }
 
-    document
-      .getElementById('acceptCookies')
-      .addEventListener('click', acceptCookies);
+    document.getElementById('acceptCookies').addEventListener('click', acceptCookies);
   </script>
 </div>

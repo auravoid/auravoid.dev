@@ -1,0 +1,45 @@
+---
+import BaseHead from '@components/BaseHead.astro';
+import ParticlesBackground from '@components/Particles.astro';
+import Project from '@components/Project.astro';
+import Footer from '@components/Footer.astro';
+import Navigation from '@components/Navigation.astro';
+---
+
+<html lang="en-US">
+  <BaseHead title="About Projects | aura" description="A simple list of projects I've worked on and made." />
+  <body class="bg-background text-primary">
+    <ParticlesBackground />
+    <div
+      class="container mx-auto my-16 w-1/2 rounded-md border-2 border-accent bg-island px-12 py-4 max-sm:m-0 max-sm:w-full max-sm:rounded-none"
+    >
+      <Navigation />
+      <h1 class="mb-4 text-center text-5xl font-bold">About Projects</h1>
+      <p class="text-center text-primary">A simple list of projects I've worked on and made.</p>
+      <hr class="mx-auto my-4 w-2/3 rounded-md border-accent" />
+      <div class="mb-4 flex flex-wrap justify-evenly">
+        <Project
+          repo="auravoid/auravoid.dev"
+          url="https://github.com/auravoid/auravoid.dev"
+          description="My personal website, built with Astro and Tailwind CSS."
+        />
+        <Project
+          repo="auravoid/fun-responses"
+          url="https://github.com/auravoid/fun-responses"
+          description="An API to get jokes, pick up lines, and more silly things. Made with Cloudflare Workers."
+        />
+        <Project
+          repo="auravoid/ai-ohto"
+          url="https://github.com/auravoid/ai-ohto"
+          description="A Discord bot to do quite a handful of things. Made with TS/JS and Discord.js."
+        />
+        <Project
+          repo="auravoid/dbots-api"
+          url="https://github.com/auravoid/dbots-api"
+          description="A simple wrapper for Discord Bots written in Typescript."
+        />
+      </div>
+      <Footer />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+---
+import BaseHead from '@components/BaseHead.astro';
+import ParticlesBackground from '@components/Particles.astro';
+import Footer from '@components/Footer.astro';
+import Navigation from '@components/Navigation.astro';
+---
+
+<html lang="en-US">
+  <BaseHead title="aura" description="My simple website." />
+  <body class="bg-background text-primary">
+    <ParticlesBackground />
+    <div
+      class="container mx-auto my-16 w-1/2 rounded-md border-2 border-accent bg-island px-12 py-4 max-sm:m-0 max-sm:w-full max-sm:rounded-none"
+    >
+      <Navigation />
+      <div class="container mx-auto my-12">
+        <h1 class="text-center text-5xl font-bold">Uh... 404?</h1>
+        <hr class="mx-auto my-4 w-2/3 rounded-md border-accent" />
+        <p class="my-2 text-center text-primary">
+          You might be lost... I recommend you go
+          <a href="/" class="text-primary underline hover:text-accent">home</a>.
+        </p>
+      </div>
+      <Footer />
+    </div>
+  </body>
+</html>

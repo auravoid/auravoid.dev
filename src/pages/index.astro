@@ -3,6 +3,8 @@ import BaseHead from '@components/BaseHead.astro';
 import ParticlesBackground from '@components/Particles.astro';
 import Sponsors from '@components/Sponsors.astro';
 import Ring from '@components/Ring.astro';
+import Footer from '@components/Footer.astro';
+import Navigation from '@components/Navigation.astro';
 ---
 
 <html lang="en-US">
@@ -10,16 +12,24 @@ import Ring from '@components/Ring.astro';
   <body class="bg-background text-primary">
     <ParticlesBackground />
     <div
-      class="container mx-auto my-16 px-12 py-8 rounded-md w-1/2 bg-island border-accent border-2"
+      class="container mx-auto my-16 w-1/2 rounded-md border-2 border-accent bg-island px-12 py-4 max-sm:m-0 max-sm:w-full max-sm:rounded-none"
     >
-      <h1 class="text-5xl font-bold mb-4 text-center">aura</h1>
-      <p class="text-center text-primary">
-        A simple website. Nothing too special about it.
-      </p>
-      <hr class="border-accent rounded-md my-4 w-2/3 mx-auto" />
+      <Navigation />
+      <h1 class="mb-4 text-center text-5xl font-bold">aura</h1>
+      <p class="text-center text-primary">A simple website. Nothing too special about it.</p>
+      <hr class="mx-auto my-4 w-2/3 rounded-md border-accent" />
       <Sponsors />
-      <hr class="border-accent rounded-md my-4 w-2/3 mx-auto" />
+      <hr class="mx-auto my-4 w-2/3 rounded-md border-accent" />
       <Ring />
+      <hr class="mx-auto my-4 w-2/3 rounded-md border-accent" />
+      <p class="mb-4 text-center text-primary">
+        Made with <i class="fas fa-heart cursor-text hover:text-red-500"></i> with <a
+          href="https://astro.build/"
+          target="_blank"
+          class="underline">Astro</a
+        > and <a href="https://tailwindcss.com/" target="_blank" class="underline">Tailwind CSS</a>.
+      </p>
+      <Footer />
     </div>
   </body>
 </html>
