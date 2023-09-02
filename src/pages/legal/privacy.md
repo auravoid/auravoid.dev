@@ -28,7 +28,8 @@ limited to, the following:
 - The public information provided by Discord about the user who initiates any interaction with the Bot (including future
   updates to the user's public information)
 
-Ai Ohto does not collect or store any identifying user data. The only data that is stored is the content of messages sent in.
+Ai Ohto does not collect or store any identifying user data. The only data that is stored is the content of messages
+sent in.
 
 Ai Ohto does not share any data with any third party.
 
@@ -74,5 +75,6 @@ following:
 - Referrer
 
 These websites do not collect any personally identifying user data. All data is processed by Cloudflare, a third party
-service. Cloudflare's Privacy Policy can be found [here](https://www.cloudflare.com/privacypolicy/). Some analytical 
-data is processed by Plausible, another 3rd party service. Plausible's Privacy Policy can be found [here](https://www.plausible.io/privacy).
+service. Cloudflare's Privacy Policy can be found [here](https://www.cloudflare.com/privacypolicy/). Some analytical
+data is processed by Plausible, another 3rd party service. Plausible's Privacy Policy can be found
+[here](https://www.plausible.io/privacy).
