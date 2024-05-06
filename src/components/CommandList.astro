@@ -11,8 +11,7 @@ interface Command {
   id: string;
   type: number;
 }
-const base = 'https://cors.auravoid.dev/';
-const commands: Categories = await fetch(base + 'https://cdn.auravoid.dev/data/commands.json', {
+const commands: Categories = await fetch('https://cdn.auravoid.dev/data/commands.json', {
   method: 'GET',
   headers: {
     'Content-Type': 'application/json',
